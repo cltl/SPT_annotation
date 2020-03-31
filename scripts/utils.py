@@ -5,7 +5,7 @@ from collections import defaultdict
 import random
 import os
 
-def read_csv(filepath):
+def read_csv(filepath, header = None):
 
     # check for separator
     with open(filepath) as infile:
@@ -15,7 +15,11 @@ def read_csv(filepath):
     else:
         sep = ','
     with open(filepath) as infile:
-        dict_list = list(csv.DictReader(infile, delimiter = sep))
+        if header == None:
+            dict_list = list(csv.DictReader(infile, delimiter = sep))
+        else:
+            dict_list = list(csv.DictReader(infile, delimiter = sep,\
+                                            fieldnames = header))
     return dict_list
 
 def sort_by_key(data_dict_list, keys):
@@ -150,7 +154,7 @@ def create_question(prop, concept, question_temp, category):
 
 def get_levels(label, certainty, restrict):
     if restrict == True:
-        if certainty == 'not_certain':
+        if certainty == 'not_certain' or certainty == 'uncertain': 
             levels = [1, 2, 3]
         else:
             if label == 'pos':

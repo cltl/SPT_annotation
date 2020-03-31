@@ -1,5 +1,4 @@
 import uuid
-import csv
 
 from utils import read_template
 from utils import read_property_info
@@ -56,6 +55,7 @@ class Pairs:
                         qu_temp = self.question_templates[coll_rel]
                         cat = self.prop_info[prop][0]['category']
                         q_d['quid']  = uuid.uuid4()
+                        q_d['relation'] = rel
                         q_d['question'] = create_question(prop, d['concept'], qu_temp, cat)
                         examples = self.relation_examples_dict[rel][coll]
                         ex_dict = get_example(examples, qu_temp, self.prop_info, rel)
