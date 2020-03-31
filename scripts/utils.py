@@ -154,7 +154,7 @@ def create_question(prop, concept, question_temp, category):
 
 def get_levels(label, certainty, restrict):
     if restrict == True:
-        if certainty == 'not_certain' or certainty == 'uncertain': 
+        if certainty == 'not_certain' or certainty == 'uncertain':
             levels = [1, 2, 3]
         else:
             if label == 'pos':
@@ -204,7 +204,7 @@ def read_group(exp_name):
     collections = ['perceptual', 'activities', 'parts', 'complex']
     prop_coll_dict = dict()
     for c in collections:
-        filepath = f'../experiment_groups/{c}-group{exp_name}.txt'
+        filepath = f'../experiment_groups/{c}-group_{exp_name}.txt'
         if os.path.isfile(filepath):
             with open(filepath) as infile:
                 properties = infile.read().strip().split('\n')
