@@ -220,10 +220,11 @@ def get_example(examples, question_temp, prop_info_dict, relation):
         example_dict = get_example_creative(examples, question_temp, prop_info_dict)
     return example_dict
 
-def to_csv(filepath, dict_list):
+def to_csv(filepath, dict_list, header = True):
     fieldnames = dict_list[0].keys()
     with open(filepath, 'w') as outfile:
         writer = csv.DictWriter(outfile, fieldnames = fieldnames)
-        writer.writeheader()
+        if header == True:
+            writer.writeheader()
         for d in dict_list:
             writer.writerow(d)
