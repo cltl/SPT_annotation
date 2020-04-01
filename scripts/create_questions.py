@@ -1,4 +1,5 @@
 import uuid
+import sys
 
 from utils import read_template
 from utils import read_property_info
@@ -71,7 +72,7 @@ class Pairs:
 
 
 if __name__ == '__main__':
-    run = 3
+    run = sys.argv[1]
     restrict = True
     pairs =  Pairs(run,  restrict = True)
     print(len(pairs.questions))
