@@ -80,7 +80,7 @@ def get_available_questions(input_dicts, question_dicts):
         else:
             questions_for_annotation.extend(questions)
     test_for_wrong_questions(questions_for_annotation)
-    return questions_for_annotation
+    return questions_for_annotation, invalid_annotations
 
 def test_for_wrong_questions(questions_for_annotation):
     wrong_n_questions = []
@@ -155,11 +155,32 @@ def batch_to_file(batch, url, experiment_name, run, n_qu, batch_n):
         new_d = dict()
         for h in header:
             new_d[h] = d[h]
-        new_d['triple'] = triple
+        new_d['run'] = run
+        new_d['subList'] = 1
         new_d['url'] = url
+        new_d['triple'] = triple
         new_dicts.append(new_d)
     to_csv(filepath, new_dicts, header=False)
     return filepath
+
+
+def test_duplicates(input_dicts, batch_dicts, invalid_annotations):
+
+    quids_batch = set([d['quid'] for d in batch_dicts])
+    quids_input = set([d['quid'] for d in input_dicts])
+    quids_invalid = set([d['quid'] for d in invalid_annotations])
+    overlap = quids_batch.intersection(quids_input)
+    valid_overlap = overlap.difference(quids_invalid)
+    #print(f'Overlap between annotated and current batch: {len(valid_overlap)}')
+    #print(valid_overlap)
+    problematic_overlap = []
+    for quid in valid_overlap:
+        if quid.startswith('test') or quid.startswith('check'):
+            continue
+        else:
+            problematic_overlap.append(quid)
+    assert len(problematic_overlap) == 0, 'Already annotated questions in batch!'
+
 
 
 def create_new_batch(run, experiment_name, url, n_qu=70, test=False):
@@ -170,7 +191,8 @@ def create_new_batch(run, experiment_name, url, n_qu=70, test=False):
     selected_properties = read_group(experiment_name)
     test_check_questions = get_check_and_test()
 
-    questions_to_annotate = get_available_questions(input_dicts, question_dicts)
+    questions_to_annotate, invalid_annotations = get_available_questions(input_dicts,\
+                                                                        question_dicts)
     questions_in_selection = [d for d in questions_to_annotate \
                               if d['property'] in selected_properties]
     questions_in_selection_total = [d for d in question_dicts \
@@ -203,6 +225,9 @@ def create_new_batch(run, experiment_name, url, n_qu=70, test=False):
     test_for_wrong_questions(new_batch)
     # Add tests and checks (one randomly picked one each)
     new_batch.extend(test_check_questions)
+    # Test if there are not duplicates
+    test_duplicates(input_dicts, new_batch, invalid_annotations)
+    # Write batch to file
     batch_path = batch_to_file(new_batch, url, experiment_name, run, n_qu, current_batch_n)
 
     print(f'Number of questions in the total dataset: {n_total}')
@@ -223,6 +248,8 @@ def main():
     experiment_name = 'experiment1'
     url = sys.argv[1]
     purpose = sys.argv[2]
+    #url = 'test'
+    #purpose = 'test'
     if purpose == 'test':
         test = True
     elif purpose == 'batch':

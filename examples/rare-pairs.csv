@@ -1,7 +1,7 @@
 collection	prop_pos	concept_pos	prop_neg	concept_neg
-perceptual	yellow	tomato	grey	grizzley_bear
-perceptual	purple	snail	green	bell_pepper
-perceptual	black	rooster	yellow	rose
+perceptual	yellow	tomato	grey	grizzly bear
+perceptual	purple	snail	green	bell pepper
+perceptual	black	rose	yellow	rose
 perceptual_scale	salty	chocolate	salty	cherry
 perceptual_scale	spicy	soda	transparent	window
 perceptual_scale	sweet	burger	savory	burger
