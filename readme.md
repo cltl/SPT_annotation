@@ -34,7 +34,7 @@ To create the questions, run:
 `cd scripts/`
 `python create_questions.py [run number]`
 
-Replace `[run number]` with the experiment run. Currently, I created run3. The run number determines which descriptions of relations will be used (stored in `templates/`).
+Replace `[run number]` with the experiment run. Currently, I created run3. The run number determines which descriptions of relations will be used (stored in `templates/`). The examples are taken from `examples/`.
 
 (2) Create batches of questions which have not been annotated yet as you go.
 
