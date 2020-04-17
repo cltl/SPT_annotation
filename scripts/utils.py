@@ -223,7 +223,8 @@ def get_example(examples, question_temp, prop_info_dict, relation):
 def to_csv(filepath, dict_list, header = True):
     fieldnames = dict_list[0].keys()
     with open(filepath, 'w') as outfile:
-        writer = csv.DictWriter(outfile, fieldnames = fieldnames)
+        writer = csv.DictWriter(outfile, fieldnames = fieldnames,\
+                    delimiter = '\t')
         if header == True:
             writer.writeheader()
         for d in dict_list:

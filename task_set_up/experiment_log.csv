@@ -95,14 +95,25 @@ run	group	batch	n_questions	n_questions_sublist	n_questions	n_participants	minut
 3	Experiment_1	34	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch34-70-70)	Agree or disagree (run3-experiment1-batch34-70-70)	yes	yes	yes	yes	yes		
 3	Experiment_1	35	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch35-70-70)	Agree or disagree (run3-experiment1-batch35-70-70)	yes	yes	yes	yes	yes	started encouraging good workers to continue working on this task	
 3	Experiment_1	36	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch36-70-70)	Agree or disagree (run3-experiment1-batch36-70-70)	yes	yes	yes	yes	yes		
-	Experiment_1	37	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch37-70-70)	Agree or disagree (run3-experiment1-batch37-70-70)	yes	yes	yes	yes	yes		
-	Experiment_1	38	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch38-70-70)	Agree or disagree (run3-experiment1-batch38-70-70)	yes	yes	yes	yes	yes		
-	Experiment_1	39	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch39-70-70)	Agree or disagree (run3-experiment1-batch39-70-70)	yes	yes	yes	yes	yes		
-	Experiment_1	40	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch40-70-70)	Agree or disagree (run3-experiment1-batch40-70-70)	yes	yes	yes	yes	yes		
-	Experiment_1	41	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch41-70-70)	Agree or disagree (run3-experiment1-batch41-70-70)	yes	yes	yes	yes	yes		
-	Experiment_1	42	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch42-70-70)	Agree or disagree (run3-experiment1-batch42-70-70)	yes						
-	Experiment_1	42	70	70	74	10	11 (7 questions/minute)	1.02	13.06	Agree or disagree (run3-experiment1-batch43-70-70)	Agree or disagree (run3-experiment1-batch43-70-70)	yes						
-					78	10	11 (7 questions/minute)	1.02	13.06	Agree or disagree (run3-experiment1-batch44-70-70)	Agree or disagree (run3-experiment1-batch44-70-70)	yes						
-					78		11 (7 questions/minute)	1.02	13.06	Agree or disagree (run3-experiment1-batch45-70-70)	Agree or disagree (run3-experiment1-batch45-70-70)	yes						
-					72		10	0.92	12.27	Agree or disagree (run3-experiment1-batch46-70-70)	Agree or disagree (run3-experiment1-batch46-70-70)	yes						
-					72		10	0.92	12.27	Agree or disagree (run3-experiment1-batch47-70-70)	Agree or disagree (run3-experiment1-batch47-70-70)	yes					applied pre-filtering: only participants fluent in English	
+3	Experiment_1	37	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch37-70-70)	Agree or disagree (run3-experiment1-batch37-70-70)	yes	yes	yes	yes	yes		
+3	Experiment_1	38	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch38-70-70)	Agree or disagree (run3-experiment1-batch38-70-70)	yes	yes	yes	yes	yes		
+3	Experiment_1	39	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch39-70-70)	Agree or disagree (run3-experiment1-batch39-70-70)	yes	yes	yes	yes	yes		
+3	Experiment_1	40	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch40-70-70)	Agree or disagree (run3-experiment1-batch40-70-70)	yes	yes	yes	yes	yes		
+3	Experiment_1	41	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch41-70-70)	Agree or disagree (run3-experiment1-batch41-70-70)	yes	yes	yes	yes	yes		
+3	Experiment_1	42	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch42-70-70)	Agree or disagree (run3-experiment1-batch42-70-70)	yes	yes	yes	yes	yes		
+3	Experiment_1	43	70	70	74	10	11 (7 questions/minute)	1.02	13.06	Agree or disagree (run3-experiment1-batch43-70-70)	Agree or disagree (run3-experiment1-batch43-70-70)	yes	yes	yes	yes	yes		
+3	Experiment_1	44	70	70	78	10	11 (7 questions/minute)	1.02	13.06	Agree or disagree (run3-experiment1-batch44-70-70)	Agree or disagree (run3-experiment1-batch44-70-70)	yes	yes	yes	yes	yes		
+3	Experiment_1	45	70	70	78	10	11 (7 questions/minute)	1.02	13.06	Agree or disagree (run3-experiment1-batch45-70-70)	Agree or disagree (run3-experiment1-batch45-70-70)	yes	yes	yes	yes	yes		
+3	Experiment_1	46	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch46-70-70)	Agree or disagree (run3-experiment1-batch46-70-70)	yes	yes	yes	yes	yes		
+3	Experiment_1	47	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch47-70-70)	Agree or disagree (run3-experiment1-batch47-70-70)	yes	yes	yes	yes	yes	applied pre-filtering: only participants fluent in English - much better results  - test if this holds	
+3	Experiment_1	48	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch48-70-70)	Agree or disagree (run3-experiment1-batch48-70-70)	yes	yes	yes	yes	yes	fluent English	
+3	Experiment_1	49	70	70	78	10	10	1.02	13.05	Agree or disagree (run3-experiment1-batch49-70-70)	Agree or disagree (run3-experiment1-batch49-70-70)	yes	yes	yes	yes	yes	fluent English	
+3	Experiment_1	50	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch50-70-70)	Agree or disagree (run3-experiment1-batch50-70-70)	yes	yes	yes	yes	yes	fluent English	
+			70	70	78	10	11 (7 questions/minute)	1.02	13.05	Agree or disagree (run3-experiment1-batch51-70-70)	Agree or disagree (run3-experiment1-batch51-70-70)	yes	yes	yes	yes	yes	f	
+			67	67	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch52-67-67)	Agree or disagree (run3-experiment1-batch52-67-67)	yes	yes	yes	yes	yes		
+			67	67	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch53-67-67)	Agree or disagree (run3-experiment1-batch53-67-67)	yes	yes	yes	yes	yes		
+			67	67	70	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch54-67-67)	Agree or disagree (run3-experiment1-batch54-67-67)	yes						
+			67	67	64	10	9	0.83	11.07	Agree or disagree (run3-experiment1-batch55-67-67)	Agree or disagree (run3-experiment1-batch55-67-67)	yes						
+					72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch56-67-67)	Agree or disagree (run3-experiment1-batch56-67-67)	yes						
+					72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch57-70-70)	Agree or disagree (run3-experiment1-batch57-70-70)							
+					48	10	10	0.65		Agree or disagree (run3-experiment1-batch58-70-70)	Agree or disagree (run3-experiment1-batch58-70-70)							

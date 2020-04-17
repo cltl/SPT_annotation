@@ -112,25 +112,30 @@ def get_batch(questions_to_annotate, n_qu = 70):
     questions_by_pair = sort_by_key(questions_to_annotate, ['property', 'concept'])
     available_properties = set([p.split('-')[0] for p in questions_by_pair.keys()])
 
-    for pair, questions in questions_by_pair.items():
-        prop = pair.split('-')[0]
-        if len(batch) < n_qu:
-            if prop not in properties:
-                #print('found a new one:', prop, len(batch))
-                batch.extend(questions)
-                properties.add(prop)
-            else:
-                props_not_used = available_properties.difference(properties)
-                #print('properties not used:', len(props_not_used), len(batch))
-                if len(props_not_used) > 0:
-                    continue
-                else:
+    if n_qu > len(questions_to_annotate):
+        print(f'only {len(questions_to_annotate)} left - adding all to batch.')
+        batch.extend(questions_to_annotate)
+    else:
+        print(f'still more than {n_qu} questions available.')
+        for pair, questions in questions_by_pair.items():
+            prop = pair.split('-')[0]
+            if len(batch) < n_qu:
+                if prop not in properties:
+                    #print('found a new one:', prop, len(batch))
                     batch.extend(questions)
                     properties.add(prop)
-                    #print('no more properties, adding quetions:', len(questions))
-        else:
-            print('found enough questions', len(batch))
-            break
+                else:
+                    props_not_used = available_properties.difference(properties)
+                    #print('properties not used:', len(props_not_used), len(batch))
+                    if len(props_not_used) > 0:
+                        continue
+                    else:
+                        batch.extend(questions)
+                        properties.add(prop)
+                        #print('no more properties, adding quetions:', len(questions))
+            else:
+                print('found enough questions', len(batch))
+                break
 
     return batch
 
