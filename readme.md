@@ -51,3 +51,12 @@ Replace `[prolific completion-url]` with the completion url you received from Pr
 
 
 To download and analyze the results, please refer to: https://github.com/PiaSommerauer/SPT_crowd_data_analysis.
+
+
+# Modification of examples or description templates
+
+To modify examples, adapt the existing examples in `examples/[relation]-pairs.csv`. 
+When you're done, run:
+`cd scripts`
+`python add_properties_to_info.py` 
+Then add the information (property-category, etc) manually in the file `data/property_info.csv` 

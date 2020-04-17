@@ -1,19 +1,19 @@
-collection,prop_pos,concept_pos,prop_neg,concept_neg
-perceptual,red,pepper,red,t-shirt
-perceptual,green,apple,white,house
-perceptual,white,rose,white,flower
-perceptual_scale,frozen,pea,salty,soup
-perceptual_scale,liquid,substance,sharp,knife
-perceptual_scale,solid,substance,soft,cushion
-parts,pockets,dress,beak,bird
-parts,china,mug,fabric,mug
-parts,icing,cake,chocolate,chocolate_bar
-complex,red,pepper,red,t-shirt
-complex,green,apple,white,house
-complex,white,rose,white,flower
-complex_scale,frozen,pea,salty,soup
-complex_scale,liquid,substance,sharp,knife
-complex_scale,solid,substance,soft,cushion
-activities,hunt,dog,breathe,dog
-activities,cook,knife,read,book
-activities,read,lamp,cook,coat
+collection	prop_pos	concept_pos	prop_neg	concept_neg
+perceptual	red	pepper	red	t-shirt
+perceptual	green	apple	white	car
+perceptual	white	rose	blue	mug
+perceptual_scale	frozen	pea	salty	soup
+perceptual_scale	liquid	substance	sharp	knife
+perceptual_scale	solid	substance	soft	cushion
+parts	pockets	dress	beak	bird
+parts	china	mug	fabric	mug
+parts	icing	cake	chocolate	chocolate_bar
+complex	red	pepper	red	t-shirt
+complex	green	apple	white	car
+complex	white	rose	blue	mug
+complex_scale	frozen	pea	salty	soup
+complex_scale	liquid	substance	sharp	knife
+complex_scale	solid	substance	soft	cushion
+activities	hunt	dog	breathe	dog
+activities	cook	knife	read	book
+activities	read	lamp	cook	coat

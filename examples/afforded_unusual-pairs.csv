@@ -1,13 +1,13 @@
-collection,prop_pos,concept_pos,prop_neg,concept_neg
-perceptual,,,,
-perceptual,,,,
-perceptual,,,,
-parts,,,,
-parts,,,,
-parts,,,,
-complex,,,,
-complex,,,,
-complex,,,,
-activities,pierce,knitting_needle,bark,dog
-activities,stab,fork,fly,brush
-activities,heat,computer,paint,brush
+collection	prop_pos	concept_pos	prop_neg	concept_neg
+perceptual				
+perceptual				
+perceptual				
+parts				
+parts				
+parts				
+complex				
+complex				
+complex				
+activities	clean	T-shirt	clean	sponge
+activities	fight	fork	fly	brush
+activities	paint	toothbrush	paint	brush

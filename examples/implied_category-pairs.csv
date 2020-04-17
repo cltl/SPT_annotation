@@ -2,7 +2,7 @@ collection	prop_pos	concept_pos	prop_neg	concept_neg
 perceptual	sweet	cotten_candy	white	dress
 perceptual	sweet	chocoloate_cake	transparent	table
 perceptual	liquid	wine	liquid	bread
-perceptual_scale	sweet	cotten_candy	white	dress
+perceptual_scale	sweet	chocoloate_bar	white	dress
 perceptual_scale	sweet	chocoloate_cake	transparent	table
 perceptual_scale	liquid	wine	liquid	bread
 perceptual_scale	alcoholic	merlot	alcoholic	lemonade
@@ -12,10 +12,10 @@ parts	legs	dog	handle	teddy
 complex	healthy	orange	French	strawberry
 complex	valuable	ruby	valuable	hammer
 complex	alcoholic	merlot	alcoholic	lemonade
-activities	breathe	dog	swim	rabbit
-activities	bark	poodle	run	worm
-activities	grow	apple_tree	speak	goldfish
-complex_scale	sweet	cotten_candy	white	dress
+activities	breathe	dog	meow	cat
+activities	grow	apple_tree	run	worm
+activities	bark	poodle	bark	dog
+complex_scale	sweet	chocoloate_bar	white	dress
 complex_scale	sweet	chocoloate_cake	transparent	table
 complex_scale	liquid	wine	liquid	bread
 complex_scale	alcoholic	merlot	alcoholic	lemonade

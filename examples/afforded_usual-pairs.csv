@@ -1,4 +1,4 @@
-collection,prop_pos,concept_pos,prop_neg,concept_neg
-activities,burn,candle,crawl,person
-activities,crawl,bug,walk,baby
-activities,study,student,act,writer
+collection	prop_pos	concept_pos	prop_neg	concept_neg
+activities	burn	candle	wrap	T-shirt
+activities	crawl	bug	paint	toothbrush
+activities	study	student	clean	jeans

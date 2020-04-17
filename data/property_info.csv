@@ -56,7 +56,7 @@ face	parts	F	have
 plastic	materials	F	be made of
 paper	materials	F	be made of
 metal	materials	F	be made of
-cotton	materials	F	be made of
+cotton	fiber	F	be made of
 voice	qualities	T	have
 pockets	parts	F	have
 gold	qualities	F	have
@@ -89,7 +89,7 @@ intelligent	qualities	F	have
 teeth	parts	F	have
 party	activities	F	do
 eyes	parts	F	have
-wool	materials	F	have
+wool	fiber	F	have
 walk	activities	F	do
 cook	activities	F	do
 dying	states	F	have
@@ -151,3 +151,16 @@ read	activities	F	do
 breathe	activities	F	do
 melt	activities	F	do
 stab	abitlities	F	do
+tablecloth	things	F	have
+sleep	activities	F	do
+clean	activities	F	do
+fight	activities	F	do
+pocket	parts	F	have
+sleep	activites	F	do
+wrap	activites	F	do
+clean	activites	F	do
+meow	activites	F	do
+made_of_cotton	fiber	F	be made of
+made_of_wool	fiber	F	be made of
+throw	activites	F	do
+human	kinds	F	be

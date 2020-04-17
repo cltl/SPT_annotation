@@ -1,6 +1,6 @@
 collection	prop_pos	concept_pos	prop_neg	concept_neg
 perceptual 	white	snow	grey	water
-perceptual 	shining	star	small	mouse
+perceptual 	small	mouse	small	dog
 perceptual 	colorful	rainbow	white	dress
 perceptual_scale	light	feather	bright	mug
 parts	metal	chain	sattle	unicycle
@@ -8,13 +8,13 @@ parts	mane	lion	plastic	pen
 parts 	lid	pot	teeth	cat
 complex	busy	bee	cheap	diamond
 complex	Italian	pasta	beautiful	sweater
-complex 	famous	movie_star	expensive	coffee
+complex 	famous	movie_star	expensive	mug
 activities	purr	cat	run	dog
-activities	cut	knife	kill	cat
+activities	cut	knife	kill	hamster
 activities 	cry	baby	walk	teacher
 perceptual_scale	white	snow	grey	water
-perceptual_scale	shining	star	small	mouse
+perceptual_scale	small	mouse	small	dog
 perceptual_scale	colorful	rainbow	white	dress
 complex_scale	busy	bee	cheap	diamond
 complex_scale	Italian	pasta	beautiful	sweater
-complex_scale	famous	movie_star	expensive	coffee
+complex_scale	famous	movie_star	expensive	mug

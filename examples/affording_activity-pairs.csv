@@ -1,19 +1,19 @@
 collection	prop_pos	concept_pos	prop_neg	concept_neg
 perceptual	bright	flashlight	grey	car
 perceptual	pointy	needle	white	t-shirt
-perceptual	cold	ice	colorful	dress
+perceptual	sharp	razor	colorful	dress
 perceptual_scale	bright	flashlight	grey	car
 perceptual_scale	pointy	needle	white	t-shirt
-perceptual_scale	cold	ice	colorful	dress
-parts	ink	pen	pattern	mug
-parts	point	needle	painting	wall
+perceptual_scale	sharp	razor	colorful	dress
+parts	ink	pen	tablecloth	table
+parts	point	needle	pocket	dress
 parts	keyboard	computer	bow	dress
 complex	waterproof	raincoat	pink	bikini
 complex	pointy	needle	white	t-shirt
-complex	cold	ice	colorful	dress
+complex	sharp	razor	colorful	dress
 complex_scale	bright	flashlight	grey	car
 complex_scale	pointy	needle	white	t-shirt
-complex_scale	cold	ice	colorful	dress
+complex_scale	sharp	razor	colorful	dress
 activities				
 activities				
 activities				

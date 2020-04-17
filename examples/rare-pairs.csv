@@ -3,17 +3,17 @@ perceptual	yellow	tomato	grey	grizzly bear
 perceptual	purple	snail	green	bell pepper
 perceptual	black	rose	yellow	rose
 perceptual_scale	salty	chocolate	salty	cherry
-perceptual_scale	spicy	soda	transparent	window
-perceptual_scale	sweet	burger	savory	burger
+perceptual_scale	spicy	cake	transparent	window
+perceptual_scale	sweet	pizza	savory	pizza
 parts	batteries	mug	handle	mug
 parts	engine	bicycle	engine	boat
 parts	batteries	pen	batteries	watch
 complex	albino	squirrel	brown	dog
 complex	purple	snail	green	bell_pepper
-complex	black	rooster	yellow	rose
+complex	black	rose	yellow	rose
 activities	read	toddler	read	teenager
 activities	teach	student	teach	teacher
 activities	swim	car	swim	rock
 complex_scale	salty	chocolate	salty	cherry
 complex_scale	spicy	soda	transparent	window
-complex_scale	sweet	burger	savory	burger
+complex_scale	sweet	pizza	savory	pizza

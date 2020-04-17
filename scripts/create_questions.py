@@ -48,6 +48,10 @@ class Pairs:
                 relations = self.level_dict[l]
                 for rel in relations:
                     coll = d['collection']
+                    prop = d['property']
+                    scale = self.prop_info[prop][0]['scale']
+                    if scale == 'T':
+                        coll = coll+'_scale'
                     coll_rel = (coll, rel)
                     if coll_rel in self.question_templates:
                         q_d = dict()
