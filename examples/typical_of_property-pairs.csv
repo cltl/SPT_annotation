@@ -1,10 +1,10 @@
 collection	prop_pos	concept_pos	prop_neg	concept_neg
 perceptual 	white	snow	grey	water
 perceptual 	small	mouse	small	dog
-perceptual 	colorful	rainbow	white	dress
+perceptual 	colorful	rainbow	white	table
 perceptual_scale	light	feather	bright	mug
-parts	metal	chain	sattle	unicycle
-parts	mane	lion	plastic	pen
+parts	made_of_metal	chain	sattle	unicycle
+parts	mane	lion	made_of_plastic	pen
 parts 	lid	pot	teeth	cat
 complex	busy	bee	cheap	diamond
 complex	Italian	pasta	beautiful	sweater

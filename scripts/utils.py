@@ -104,6 +104,8 @@ def verb_agreement(prop):
         prop_s = 'flies'
     elif prop == 'swim':
         prop_ing = 'swimming'
+    elif prop == 'breathe':
+        prop_ing = 'breathing'
     return prop_s, prop_ing
 
 def create_question(prop, concept, question_temp, category):
@@ -111,14 +113,17 @@ def create_question(prop, concept, question_temp, category):
     prop_s, prop_ing = verb_agreement(prop)
     prop_cap = capitalize(prop)
     concept_cap = capitalize(concept)
-    if prop.startswith('made_of'):
+    #category = prop_info[prop][0]['category']
+    prop = prop.strip()
+    if prop.startswith('made_of_'):
         link_sg = 'is'
         link_inf = 'be'
         link = 'are'
         link_ing = 'being'
         clink_ing = 'Being'
-        part = 'materials'
+        #part = 'materials'
         lneg = 'is not'
+        neg = 'not'
     else:
         link_sg = 'has'
         link_inf = 'have'
@@ -127,6 +132,8 @@ def create_question(prop, concept, question_temp, category):
         clink_ing = 'Having'
         part = 'parts or components'
         lneg = 'does not have'
+        neg = 'no'
+
 
     replacements = [
                     ('[X]', prop),
@@ -139,11 +146,11 @@ def create_question(prop, concept, question_temp, category):
                     ('[Linf]', link_inf),
                     ('[Lsg]', link_sg),
                     ('[Ling]', link_ing),
-                    ('[PART]', part),
                     ('[Lneg]', lneg),
                     ('[CLing]', clink_ing),
                     ('[category]', category),
-                    ('[link]', link)
+                    ('[link]', link),
+                    ('[neg]', neg)
                     ]
 
     for char, replace_form in replacements:

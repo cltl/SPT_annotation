@@ -160,7 +160,26 @@ sleep	activites	F	do
 wrap	activites	F	do
 clean	activites	F	do
 meow	activites	F	do
-made_of_cotton	fiber	F	be made of
-made_of_wool	fiber	F	be made of
+made_of_cotton	fibers	F	be made of
+made_of_wool	fibers	F	be made of
 throw	activites	F	do
 human	kinds	F	be
+made_of_metal	materials	F	be made of
+made_of_gold	materials	F	be made of
+made_of_paper	materials	F	be made of
+made_of_china	materials	F	be made of
+made_of_fabric	materials	F	be made of
+made_of_chocolate	materials	F	be made of
+made_of_plastic	materials	F	be made of
+eye	body_part	F	have
+emergency lights	parts	F	have
+curtain	parts	F	have
+page	parts	F	have
+made_of_glass	materials	F	have
+made_of_sugar	materials	F	have
+emergency light	parts	F	have
+spare_wheel	parts	F	have
+removable roof	parts	F	have
+handle bar	parts	F	have
+sail	parts	F	have
+seat	parts	F	have

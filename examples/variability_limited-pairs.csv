@@ -5,9 +5,12 @@ perceptual	white	rose	blue	mug
 perceptual_scale	frozen	pea	salty	soup
 perceptual_scale	liquid	substance	sharp	knife
 perceptual_scale	solid	substance	soft	cushion
-parts	pockets	dress	beak	bird
-parts	china	mug	fabric	mug
-parts	icing	cake	chocolate	chocolate_bar
+parts_material	made_of_glass	table	made_of_sugar	plate
+parts_material	made_of_china	mug	made_of_cotton	car
+parts_material	made_of_paper	plate	made_of_chocolate	piano
+parts	emergency light	car	spare_wheel	car
+parts	removable roof	car	handle bar	bike
+parts	sail	boat	seat	car
 complex	red	pepper	red	t-shirt
 complex	green	apple	white	car
 complex	white	rose	blue	mug

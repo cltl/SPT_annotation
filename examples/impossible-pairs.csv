@@ -5,8 +5,8 @@ perceptual	frozen	flame	light	book
 perceptual_scale	dry	water	white	rose
 perceptual_scale	solid	steam	orange	flame
 perceptual_scale	frozen	flame	light	book
-parts	plastic	magnet	ink	pen
-parts	cotton	mirror	plastic	dress
+parts	made_of_plastic	magnet	ink	pen
+parts	made_of_cotton	mirror	made_of_plastic	dress
 parts	lungs	goldfish	pockets	dress
 complex	alive	corpse	educational	movie
 complex	human	bee	innocent	prisoner

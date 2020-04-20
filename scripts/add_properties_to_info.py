@@ -12,7 +12,7 @@ def add_new_example_props():
 
     # Get example properties
     ex_files = glob.glob('../examples/*-pairs.csv')
-    properties = set()
+
     p_targets = ['prop_pos', 'prop_neg']
     for f in ex_files:
         with open(f) as infile:
@@ -27,9 +27,10 @@ def add_new_example_props():
                     for h in header:
                         if h not in new_d:
                             new_d[h] = 'NEEDS INFO'
-                    prop_dicts.append(new_d)
+                    if new_d not in prop_dicts:
+                        prop_dicts.append(new_d)
     print(f'Add info to added properties in: {path}')
     to_csv(path, prop_dicts)
 
 if __name__ == '__main__':
-    add_new_example_props()                   
+    add_new_example_props()

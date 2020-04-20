@@ -3,9 +3,9 @@ perceptual	spicy	chili_pepper	sweet	spinach
 perceptual	heavy	rock	green	rasperry
 perceptual	bitter	coffee	salty	beer
 perceptual_scale	heavy	rock	bright	mug
-parts	metal	chain	fabric	chain
-parts	china	mug	plastic	plate
-parts	tip	needle	eyes	dog
+parts	made_of_metal	chain	made_of_fabric	chain
+parts	made_of_china	mug	made_of_plastic	plate
+parts	tip	needle	eye	dog
 complex	spicy	chili_pepper	sweet	spinach
 complex	heavy	rock	green	rasperry
 complex	expensive	cigar	expensive	cigarette

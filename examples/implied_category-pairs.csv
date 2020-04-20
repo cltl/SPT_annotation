@@ -7,9 +7,9 @@ perceptual_scale	sweet	chocoloate_cake	transparent	table
 perceptual_scale	liquid	wine	liquid	bread
 perceptual_scale	alcoholic	merlot	alcoholic	lemonade
 parts	mane	pony	ink	pen
-parts	metal	earring	sattle	bike
-parts	legs	dog	handle	teddy
-complex	healthy	orange	French	strawberry
+parts	made_of_metal	earring	sattle	bike
+parts	legs	dog	handle	teddy bear
+complex	healthy	orange	heavy	strawberry
 complex	valuable	ruby	valuable	hammer
 complex	alcoholic	merlot	alcoholic	lemonade
 activities	breathe	dog	meow	cat
