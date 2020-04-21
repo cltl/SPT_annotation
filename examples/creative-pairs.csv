@@ -5,8 +5,11 @@ perceptual	dark	story	liquid	argument
 perceptual_scale	hot	anger	hot	fire
 perceptual_scale	cold	person	heavy	stone
 perceptual_scale	dark	story	liquid	argument
+parts_material	hot	anger	hot	fire
+parts_material	cold	person	heavy	stone
+parts_material	dark	story	liquid	argument
 parts	voice	book	head	person
-parts	gold	idea	made_of_gold	necklace
+parts	gold	idea	sattle	bike
 parts	exit	situation	nose	argument
 complex	dying	computer	dying	pet
 complex	alive	idea	alive	dog

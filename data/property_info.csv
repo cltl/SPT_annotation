@@ -56,7 +56,7 @@ face	parts	F	have
 plastic	materials	F	be made of
 paper	materials	F	be made of
 metal	materials	F	be made of
-cotton	fiber	F	be made of
+cotton	materials	F	be made of
 voice	qualities	T	have
 pockets	parts	F	have
 gold	qualities	F	have
@@ -89,7 +89,7 @@ intelligent	qualities	F	have
 teeth	parts	F	have
 party	activities	F	do
 eyes	parts	F	have
-wool	fiber	F	have
+wool	materials	F	have
 walk	activities	F	do
 cook	activities	F	do
 dying	states	F	have
@@ -183,3 +183,11 @@ removable roof	parts	F	have
 handle bar	parts	F	have
 sail	parts	F	have
 seat	parts	F	have
+made_of_grain	materials	F	be made of
+made_of_wheat	materials	F	be made of
+roof	parts	F	have
+tail	parts	F	have
+fruit_bowl	parts	F	have
+fin	parts	F	have
+made_of_roses	flowers	F	be made of
+made_of_daysies	flowers	F	be made of

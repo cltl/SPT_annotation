@@ -1,6 +1,6 @@
 collection	prop_pos	concept_pos	prop_neg	concept_neg
 perceptual	white	t-shirt	green	pepper
-perceptual	white	dress	green	apple
+perceptual	white	dress	green	pea
 perceptual	purple	flower	orange	carrot
 perceptual_scale	sharp	knife	solid	substance
 perceptual_scale	salty	soup	salty	strawberry
@@ -8,9 +8,9 @@ perceptual_scale	bitter	chocolate	soft	diamond
 parts	pockets	dress	blade	knife
 parts	bow	dress	emergency lights	car
 parts	curtain	window	page	book
-parts_material	made_of_cotton	fabric	made_of_metal	knife
-parts_material	made_of_wool	dress	made_of_metal	razor_blade
-parts_material	made_of_wood	toy	made_of_paper	book
+parts_material	made_of_roses	bouquet	made_of_metal	knife
+parts_material	made_of_cotton	bag	made_of_metal	razor_blade
+parts_material	made_of_daysies	bouquet	made_of_paper	book
 complex	white	t-shirt	green	pepper
 complex	white	dress	green	apple
 complex	purple	flower	orange	carrot

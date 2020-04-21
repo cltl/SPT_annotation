@@ -5,6 +5,9 @@ perceptual	sharp	razor	colorful	dress
 perceptual_scale	bright	flashlight	grey	car
 perceptual_scale	pointy	needle	white	t-shirt
 perceptual_scale	sharp	razor	colorful	dress
+parts_material	bright	flashlight	grey	car
+parts_material	pointy	needle	white	t-shirt
+parts_material	sharp	razor	colorful	dress
 parts	ink	pen	tablecloth	table
 parts	point	needle	pocket	dress
 parts	keyboard	computer	bow	dress

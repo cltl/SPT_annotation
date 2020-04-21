@@ -12,18 +12,20 @@ def read_input(run, experiment_name):
     header_path = f'{dir_path}header.txt'
     batch_numbers = []
 
-    with open(header_path) as infile:
-        header = infile.read().split(',')
+    if os.path.isfile(header_path):
+        with open(header_path) as infile:
+            header = infile.read().split(',')
 
-    filepaths = os.listdir(dir_path)
-    for f in filepaths:
-        full_path = f'{dir_path}{f}'
-        input_dicts = read_csv(full_path, header = header)
-        all_input_dicts.extend(input_dicts)
-        # # qu70-s_qu70-batch18.csv
-        if f != 'header.txt':
-            batch_n = int(f.split('-')[2].split('.')[0][len('batch'):])
-            batch_numbers.append(batch_n)
+        filepaths = os.listdir(dir_path)
+        for f in filepaths:
+            full_path = f'{dir_path}{f}'
+            input_dicts = read_csv(full_path, header = header)
+            all_input_dicts.extend(input_dicts)
+            # # qu70-s_qu70-batch18.csv
+            if f != 'header.txt':
+                if 'TEST' not in f:
+                    batch_n = int(f.split('-')[2].split('.')[0][len('batch'):])
+                    batch_numbers.append(batch_n)
     return all_input_dicts, batch_numbers
 
 def collect_not_annotated(input_dicts, question_dicts):
@@ -143,12 +145,16 @@ def get_batch(questions_to_annotate, n_qu = 70):
 def batch_to_file(batch, url, experiment_name, run, n_qu, batch_n):
 
     header = ['quid', 'question', 'example_pos', 'example_neg']
-    header_new = ['quid', 'description', 'exampleTrue', 'exampleFalse', 'triple', 'url']
+    header_new = ['quid', 'description', 'exampleTrue', 'exampleFalse',\
+                  'triple', 'completionUrl', 'name']
     dirpath = f'../prolific_input/run{run}-group_{experiment_name}/'
     batch_name = f'qu{n_qu}-s_qu{n_qu}-batch{batch_n}'
     filepath = f'{dirpath}{batch_name}.csv'
+    pl_name = f'Agree or disagree (run{run}-{experiment_name}-batch{batch_n}-{n_qu}-{n_qu})'
 
     ### write header###
+    if not os.path.isdir(dirpath):
+        os.mkdir(dirpath)
     header_path = f'{dirpath}header.txt'
     if not os.path.isfile(header_path):
         with open(header_path, 'w') as outfile:
@@ -158,14 +164,17 @@ def batch_to_file(batch, url, experiment_name, run, n_qu, batch_n):
     for d in batch:
         triple = f"{d['relation']}-{d['property']}-{d['concept']}"
         new_d = dict()
-        for h in header:
-            new_d[h] = d[h]
+        new_d['quid'] = d['quid']
+        new_d['description'] = d['question']
+        new_d['exampleTrue'] = d['example_pos']
+        new_d['exampleFalse'] = d['example_neg']
         new_d['run'] = run
         new_d['subList'] = 1
-        new_d['url'] = url
+        new_d['completionUrl'] = url
         new_d['triple'] = triple
+        new_d['name'] = pl_name
         new_dicts.append(new_d)
-    to_csv(filepath, new_dicts, header=False)
+    to_csv(filepath, new_dicts, header=True)
     return filepath
 
 
@@ -220,7 +229,10 @@ def create_new_batch(run, experiment_name, url, n_qu=70, test=False):
     ###########
 
     # Create new batch
-    highest_batch_number = max(batch_numbers)
+    if batch_numbers:
+        highest_batch_number = max(batch_numbers)
+    else:
+        highest_batch_number = 0
     if test == False:
         current_batch_n = highest_batch_number + 1
     else:
@@ -249,10 +261,10 @@ def create_new_batch(run, experiment_name, url, n_qu=70, test=False):
 
 
 def main():
-    run = 3
-    experiment_name = 'experiment1'
-    url = sys.argv[1]
-    purpose = sys.argv[2]
+    run = sys.argv[1]
+    experiment_name = 'experiment2'
+    url = sys.argv[2]
+    purpose = sys.argv[3]
     #url = 'test'
     #purpose = 'test'
     if purpose == 'test':

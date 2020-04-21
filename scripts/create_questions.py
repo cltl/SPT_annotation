@@ -50,8 +50,8 @@ class Pairs:
                     coll = d['collection']
                     prop = d['property']
                     if prop.startswith('made_of_'):
-                        print(prop)
                         coll = 'parts_material'
+                        #print(prop, coll)
                     scale = self.prop_info[prop][0]['scale']
                     if scale == 'T':
                         coll = coll+'_scale'
@@ -68,6 +68,8 @@ class Pairs:
                         ex_dict = get_example(examples, qu_temp, self.prop_info, rel)
                         q_d.update(ex_dict)
                         questions.append(q_d)
+                    #else:
+                        #print('not found:,', coll_rel)
         return questions
 
     def to_file(self):

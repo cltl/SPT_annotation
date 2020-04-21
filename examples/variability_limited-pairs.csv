@@ -6,8 +6,8 @@ perceptual_scale	frozen	pea	salty	soup
 perceptual_scale	liquid	substance	sharp	knife
 perceptual_scale	solid	substance	soft	cushion
 parts_material	made_of_glass	table	made_of_sugar	plate
-parts_material	made_of_china	mug	made_of_cotton	car
-parts_material	made_of_paper	plate	made_of_chocolate	piano
+parts_material	made_of_metal	knife	made_of_cotton	car
+parts_material	made_of_wheat	bread	made_of_chocolate	piano
 parts	emergency light	car	spare_wheel	car
 parts	removable roof	car	handle bar	bike
 parts	sail	boat	seat	car

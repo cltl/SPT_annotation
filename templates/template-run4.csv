@@ -11,13 +11,15 @@ level	question	relation	perceptual	perceptual_scale	complex	complex_scale	parts	
 1	I know that (a/an) [Y] has (a/an) [X] as most or all other things similar to (a/an) [Y] have (a/an) [X]. 	implied_category	0	0	0	0	1	0	0
 1	I know that (a/an) [Y] can [X]/be used for [Xing] as most or all other things similar to (a/an) [Y] [X]. 	implied_category	0	0	0	0	0	0	1
 1	All or most  [Y](s) can [X]/be used for [Xing]. This is not what they normally do or are used for. 	afforded_unusual	0	0	0	0	0	0	1
-2	You can find (a/an) [Y] which is [X]. [CX] is one of a few possible [category] (a/an) [Y] can [link]. There is only a limited range of possible [category].	variability_limited	1	0	1	0	0	1	0
-2	You can find (a/an) [Y] which is [X]. (A/an) [Y] is either [X] or not [X]. It cannot be a bit more or less [X].	variability_limited	0	1	0	1	0	0	0
-2	You can find (a/an) [Y] which has (a/an) [X]. (A/an) [Y] can either have an [X] or no [X]. This is relevant for distinguishing different kinds of [X](s).	variability_limited	0	0	0	0	1	0	0
+2	You can find (a/an) [Y] which is [X]. [CX] is one of a few possible [category] (a/an) [Y] usually has. There is only a limited range of possible [category].	variability_limited	1	0	1	0	0	0	0
+2	You can find (a/an) [Y] which is [X]. [CX] is one of a few possible [category] (a/an) [Y] is usually made of. There is only a limited range of possible [category].	variability_limited	0	0	0	0	0	1	0
+2	You can find (a/an) [Y] which is [X]. (A/an) [Y] is usually either [X] or not [X]. It cannot be a bit more or less [X].	variability_limited	0	1	0	1	0	0	0
+2	You can find (a/an) [Y] which has (a/an) [X]. (A/an) [Y] usually either has an [X] or no [X]. This distinguishes a certain type of [Y] from others.	variability_limited	0	0	0	0	1	0	0
 2	You can find (a/an) [Y] which can [X]/be used for [Xing]. This distinguishes a certain type of [Y] from others. 	variability_limited	0	0	0	0	0	0	1
-2	You can find (a/an) [Y] which is [X]. [CX] is one of many possible [category] (a/an) [Y] can [link]. The range of [category] is almost unlimited. 	variability_open	1	0	1	0	0	1	0
-2	You can find (a/an) [Y] which is [X]. (A/an) [Y] is either [X], a bit more or less [X] or the opposite of [X].	variability_open	0	1	0	1	0	0	0
-2	You can find (a/an) [Y] which has (a/an) [X].  (A/an) [Y] can either have an [X] or no [X] but this does not distinguish a certain type of [Y] from others. 	variability_open	0	0	0	0	1	0	0
+2	You can find (a/an) [Y] which is [X]. [CX] is one of many possible [category] (a/an) [Y] usually has. The range of [category] is almost unlimited. 	variability_open	1	0	1	0	0	0	0
+2	You can find (a/an) [Y] which is [X]. [CX] is one of many possible [category] (a/an) [Y] is usually made of. The range of [category] is almost unlimited. 	variability_open	0	0	0	0	0	1	0
+2	You can find (a/an) [Y] which is [X]. (A/an) [Y] is usually either [X], a bit more or less [X] or the opposite of [X].	variability_open	0	1	0	1	0	0	0
+2	You can find (a/an) [Y] which has (a/an) [X].  (A/an) [Y] usually either have an [X] or no [X] but this does not distinguish a certain type of [Y] from others. 	variability_open	0	0	0	0	1	0	0
 3	I think (a/an) [Y] can be [X], but this is rare or uncommon.	rare	1	1	1	1	0	0	0
 3	I think (a/an) [Y] can [Lsg] [X], but this is rare or uncommon.	rare	0	0	0	0	1	1	0
 3	I think there is a [Y]  which can [X]/be used for [Xing], but this is rare or uncommon.	rare	0	0	0	0	0	0	1

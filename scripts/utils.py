@@ -66,7 +66,7 @@ def read_template(run):
     filepath = f'../templates/template-run{run}.csv'
     dict_list = read_csv(filepath)
     collections = ['perceptual', 'perceptual_scale', 'complex',\
-           'complex_scale','parts', 'activities']
+           'complex_scale','parts', 'parts_material', 'activities']
 
     collection_relation_question_dict = dict()
     level_relation_dict = defaultdict(set)
@@ -79,7 +79,7 @@ def read_template(run):
             level_relation_dict[level].add(relation)
         for c in target_collections:
             collection_relation_question_dict[(c, relation)] = d['question']
-    assert len(collection_relation_question_dict) == 60, 'not enough relations'
+    assert len(collection_relation_question_dict) == 70, 'not enough relations'
     assert len(level_relation_dict[1]) == 6, 'wrong mapping level 1'
     assert len(level_relation_dict[2]) == 2, 'wrong mapping level 2'
     assert len(level_relation_dict[3]) == 4, 'wrong mapping level 3'

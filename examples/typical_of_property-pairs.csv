@@ -2,9 +2,11 @@ collection	prop_pos	concept_pos	prop_neg	concept_neg
 perceptual 	white	snow	grey	water
 perceptual 	small	mouse	small	dog
 perceptual 	colorful	rainbow	white	table
-perceptual_scale	light	feather	bright	mug
-parts	made_of_metal	chain	sattle	unicycle
-parts	mane	lion	made_of_plastic	pen
+parts_material	made_of_metal	chain	made_of_plastic	pen
+parts_material	made_of_wool	sweater	made_of_wool	T-shirt
+parts_material	made_of_grain	bread	made_of_grain	cake
+parts	sail	sailing_boat	sail	surf_board
+parts	mane	lion	sattle	unicycle
 parts 	lid	pot	teeth	cat
 complex	busy	bee	cheap	diamond
 complex	Italian	pasta	beautiful	sweater
@@ -15,6 +17,7 @@ activities 	cry	baby	walk	teacher
 perceptual_scale	white	snow	grey	water
 perceptual_scale	small	mouse	small	dog
 perceptual_scale	colorful	rainbow	white	dress
+perceptual_scale	light	feather	bright	mug
 complex_scale	busy	bee	cheap	diamond
 complex_scale	Italian	pasta	beautiful	sweater
 complex_scale	famous	movie_star	expensive	mug

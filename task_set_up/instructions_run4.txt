@@ -1,0 +1,18 @@
+<p> Please decide wether you agree or disagree with the statement. The statements contain descriptions of things or concepts.  </p>
+
+<p> Please follow these guidelines when working on the task: </p>
+
+<ul>
+  <li>Read carefully. If you decide to select `agree’, you should agree with every aspect of the statement.</li>
+  <li>Look up words you do not know.</li>
+  <li>Try to be consistent in your answers and avoid contradicting yourself. </li>
+  <li>Note that the statements have been generated automatically and may therefore sound a bit awkward. Nevertheless, please try to decide whether you agree or disagree with the content. </li>
+</ul>
+
+<p> Please note that your answers will be analyzed with respect to consistency and check questions. Workers with low consistency and failed checks may be excluded from future versions of this experiment. Workers who do not change their behavior despite warnings may not be paid. </p>
+
+<p> If you have any questions or feedback about this task, please contact Pia Sommerauer (pia.sommerauer@vu.nl or via Prolific). 
+
+<p> Your answers will be used for scientific purposes. No personal information will be stored. You can leave the experiment at any time, but please try to complete it.  </p>
+
+<p> <strong> By participating in this task, you help researchers make AI models more transparent and remove bias from them. Your work is very much appreciated!  </strong> </p>

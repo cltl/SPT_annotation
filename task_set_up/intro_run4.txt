@@ -1,0 +1,1 @@
+In this task, you will be asked whether you agree or disagree with statements. The statements involve things and their attributes (e.g. colors, shapes, activities they engage in, etc). We have included examples to help you make a decision. With participating in this task, you help researchers to make AI models more transparent and detect and remove social bias from them.

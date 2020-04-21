@@ -5,6 +5,9 @@ perceptual	black	rose	yellow	rose
 perceptual_scale	salty	chocolate	salty	cherry
 perceptual_scale	spicy	cake	transparent	window
 perceptual_scale	sweet	pizza	savory	pizza
+parts_material	made_of_plastic	dress	made_of_plastic	cup
+parts_material	made_of_wood	plate	made_of_wood	table
+parts_material	made_of_plastic	wine_glass	made_of_glass	wine_glass
 parts	batteries	mug	handle	mug
 parts	engine	bicycle	engine	boat
 parts	batteries	pen	batteries	watch
