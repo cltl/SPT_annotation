@@ -112,8 +112,11 @@ run	group	batch	n_questions	n_questions_sublist	n_questions	n_participants	minut
 			70	70	78	10	11 (7 questions/minute)	1.02	13.05	Agree or disagree (run3-experiment1-batch51-70-70)	Agree or disagree (run3-experiment1-batch51-70-70)	yes	yes	yes	yes	yes	f	
 			67	67	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch52-67-67)	Agree or disagree (run3-experiment1-batch52-67-67)	yes	yes	yes	yes	yes		
 			67	67	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch53-67-67)	Agree or disagree (run3-experiment1-batch53-67-67)	yes	yes	yes	yes	yes		
-			67	67	70	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch54-67-67)	Agree or disagree (run3-experiment1-batch54-67-67)	yes						
-			67	67	64	10	9	0.83	11.07	Agree or disagree (run3-experiment1-batch55-67-67)	Agree or disagree (run3-experiment1-batch55-67-67)	yes						
-					72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch56-67-67)	Agree or disagree (run3-experiment1-batch56-67-67)	yes						
-					72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch57-70-70)	Agree or disagree (run3-experiment1-batch57-70-70)							
-					48	10	10	0.65		Agree or disagree (run3-experiment1-batch58-70-70)	Agree or disagree (run3-experiment1-batch58-70-70)							
+			67	67	70	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch54-67-67)	Agree or disagree (run3-experiment1-batch54-67-67)	yes	yes	yes	yes	yes		
+			67	67	64	10	9	0.83	11.07	Agree or disagree (run3-experiment1-batch55-67-67)	Agree or disagree (run3-experiment1-batch55-67-67)	yes	yes	yes	yes	yes		
+					72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch56-67-67)	Agree or disagree (run3-experiment1-batch56-67-67)	yes	yes	yes	yes	yes		
+					72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch57-70-70)	Agree or disagree (run3-experiment1-batch57-70-70)	yes	yes	yes	yes	yes		
+					48	10	10	0.65	12.27	Agree or disagree (run3-experiment1-batch58-70-70)	Agree or disagree (run3-experiment1-batch58-70-70)	yes	yes	yes	yes	yes		
+4	Experiment_2	1	70	70	72	10	10	0.92	12.27	Agree or disagree (run4-experiment1-batch1-70-70)	Agree or disagree (run4-experiment1-batch1-70-70)	yes	yes	yes	yes	yes	high quality workers all took more than 10 minutes. I think we have to change the time indication a bit.	
+4	Experiment_2	2	70	70	72	10	11	1.02	13.05	Agree or disagree (run4-experiment1-batch2-70-70)	Agree or disagree (run4-experiment1-batch2-70-70)	yes	yes	yes	yes	yes		
+4	Experiment_2	3	70	70	72	10	11 (7 questions/minute)	1.02	13.05	Agree or disagree (run4-experiment1-batch3-70-70)	Agree or disagree (run4-experiment1-batch3-70-70)	yes						

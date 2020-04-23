@@ -259,6 +259,28 @@ def create_new_batch(run, experiment_name, url, n_qu=70, test=False):
     pl_n = f'Agree or disagree (run{run}-{experiment_name}-batch{current_batch_n}-{n_qu}-{n_qu})'
     print(pl_n)
 
+def print_task_intro(run):
+
+    # load description:
+
+    with open(f'../task_set_up/description_run{run}.txt') as infile:
+        text_description = infile.read()
+
+    with open(f'../task_set_up/instructions_run{run}.txt') as infile:
+        text_instructions = infile.read()
+
+    print('-------------------------------------\n')
+    print_des = input('Print description? (y/n)')
+    if print_des == 'y':
+        print('\n----- Task description ------\n')
+        print(text_description)
+    print_instructions = input('Print instructions? (y/n)')
+    if print_instructions == 'y':
+        print('\n----- Instructions ------\n')
+        print(text_instructions)
+
+
+
 
 def main():
     run = sys.argv[1]
@@ -273,6 +295,7 @@ def main():
         test = False
 
     create_new_batch(run, experiment_name, url, n_qu=70, test = test)
+    print_task_intro(run)
 
 if __name__ == '__main__':
     main()
