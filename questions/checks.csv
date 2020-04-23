@@ -1,5 +1,5 @@
-"relation"	"question"	"quid"	"collection"	"property"	"concept"	"label"	"certainty"	"sources"	"prop_pos"	"concept_pos"	"example_pos"	"prop_neg"	"concept_neg"	"example_neg"
-"_check"	"I am still paying attention to this task."	"check1"	"_check"	"_check1"	"_check1"	"_check"	"_check"	"_check"	"_check"	"_check"	"The earth is round. "	"_check"	"_check"	"The earth is flat."
-"_check"	"I am working on a task in which I agree or disagree with statements."	"check2"	"_check"	"_check2"	"_check2"	"_check"	"_check"	"_check"	"_check"	"_check"	"Paris is a city."	"_check"	"_check"	"Russia is a city."
-"_check"	"I am still focused on this task."	"check3"	"_check"	"_check3"	"_check3"	"_check"	"_check"	"_check"	"_check"	"_check"	"France is a country."	"_check"	"_check"	"Aamsterdam is a country."
-"_check"	"I am answering questions at random. "	"check4"	"_check"	"_check4"	"_check4"	"_check"	"_check"	"_check"	"_check"	"_check"	"Trains are vehicles. "	"_check"	"_check"	"Carrots are animals. "
+relation	question	quid	collection	property	concept	label	certainty	sources	prop_pos	concept_pos	example_pos	prop_neg	concept_neg	example_neg
+_check	I am still paying attention to this task.	check1	_check	_check1	_check1	_check	_check	_check	_check	_check	The earth is round. 	_check	_check	The earth is flat.
+_check	I am working on a task in which I agree or disagree with statements.	check2	_check	_check2	_check2	_check	_check	_check	_check	_check	Paris is a city.	_check	_check	Russia is a city.
+_check	I am still focused on this task.	check3	_check	_check3	_check3	_check	_check	_check	_check	_check	France is a country.	_check	_check	Amsterdam is a country.
+_check	I am answering questions at random. 	check4	_check	_check4	_check4	_check	_check	_check	_check	_check	Trains are vehicles. 	_check	_check	Carrots are animals. 

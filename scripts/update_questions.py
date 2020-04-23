@@ -1,3 +1,5 @@
+# moved to update_questions.py
+
 # updating examples
 
 from utils import read_csv, to_csv
@@ -33,6 +35,15 @@ def add_quot_marks(question_dicts, path, rel = 'creative'):
                 d[k] = phrase
     to_csv(path, question_dicts)
 
+def correct_check(path, question_dicts):
+    path_backup = path.replace('.csv', '-backup.csv')
+    to_csv(path_backup, question_dicts)
+    for d in question_dicts:
+        if d['relation'] == ('affording_activity') and d['property'].startswith('made_of'):
+            print(d['question'])
+            d['question'] = d['question'].replace('I know that being (a/an)', 'I know that being')
+            print(d['question'])
+    to_csv(path, question_dicts)
 
 if __name__ == '__main__':
 
@@ -42,10 +53,12 @@ if __name__ == '__main__':
     ex_dict['prop_new'] = 'swim'
     ex_dict['concept_new'] = 'rock'
 
-    path = '../questions/run3-all-restricted_True.csv'
+    path = '../questions/run4-all-restricted_True.csv'
     question_dicts = read_csv(path)
 
     rel = 'rare'
     label = 'neg'
     #update_examples(question_dicts, label, ex_dict, rel)
     #add_quot_marks(question_dicts, path, rel = 'creative')
+
+    #correct_check(path, question_dicts)

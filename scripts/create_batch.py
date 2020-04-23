@@ -260,6 +260,7 @@ def create_new_batch(run, experiment_name, url, n_qu=70, test=False):
     ###
     ###########
 
+
     # Create new batch
     if batch_numbers:
         highest_batch_number = max(batch_numbers)
