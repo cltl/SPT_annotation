@@ -195,6 +195,38 @@ def test_duplicates(input_dicts, batch_dicts, invalid_annotations):
             problematic_overlap.append(quid)
     assert len(problematic_overlap) == 0, 'Already annotated questions in batch!'
 
+def suggest_cost(n_questions):
+    # UK min wage = 8.21
+    # divided by 60 gives min wage per minute
+    per_minute = 0.13
+    time_per_question_seconds = 8
+    price_per_question = (per_minute/60) *7
+    final = n_questions * price_per_question
+    estimated_time = (n_questions * time_per_question_seconds) / 60
+    print(f'estimated time: {estimated_time} minutes')
+    print(f'suggested price: {final}')
+
+
+def print_task_intro(run):
+
+    # load description:
+
+    with open(f'../task_set_up/description_run{run}.txt') as infile:
+        text_description = infile.read()
+
+    with open(f'../task_set_up/instructions_run{run}.txt') as infile:
+        text_instructions = infile.read()
+
+    print('-------------------------------------\n')
+    print_des = input('Print description? (y/n)')
+    if print_des == 'y':
+        print('\n----- Task description ------\n')
+        print(text_description)
+    print_instructions = input('Print instructions? (y/n)')
+    if print_instructions == 'y':
+        print('\n----- Instructions ------\n')
+        print(text_instructions)
+
 
 
 def create_new_batch(run, experiment_name, url, n_qu=70, test=False):
@@ -258,26 +290,10 @@ def create_new_batch(run, experiment_name, url, n_qu=70, test=False):
     print(f'New batch written to: {batch_path}')
     pl_n = f'Agree or disagree (run{run}-{experiment_name}-batch{current_batch_n}-{n_qu}-{n_qu})'
     print(pl_n)
+    print_task_intro(run)
+    print(f'\nCost suggestion for {len(new_batch)} questions:\n')
+    suggest_cost(len(new_batch))
 
-def print_task_intro(run):
-
-    # load description:
-
-    with open(f'../task_set_up/description_run{run}.txt') as infile:
-        text_description = infile.read()
-
-    with open(f'../task_set_up/instructions_run{run}.txt') as infile:
-        text_instructions = infile.read()
-
-    print('-------------------------------------\n')
-    print_des = input('Print description? (y/n)')
-    if print_des == 'y':
-        print('\n----- Task description ------\n')
-        print(text_description)
-    print_instructions = input('Print instructions? (y/n)')
-    if print_instructions == 'y':
-        print('\n----- Instructions ------\n')
-        print(text_instructions)
 
 
 
@@ -295,7 +311,6 @@ def main():
         test = False
 
     create_new_batch(run, experiment_name, url, n_qu=70, test = test)
-    print_task_intro(run)
 
 if __name__ == '__main__':
     main()

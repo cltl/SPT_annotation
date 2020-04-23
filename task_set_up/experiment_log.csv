@@ -120,3 +120,6 @@ run	group	batch	n_questions	n_questions_sublist	n_questions	n_participants	minut
 4	Experiment_2	1	70	70	72	10	10	0.92	12.27	Agree or disagree (run4-experiment1-batch1-70-70)	Agree or disagree (run4-experiment1-batch1-70-70)	yes	yes	yes	yes	yes	high quality workers all took more than 10 minutes. I think we have to change the time indication a bit.	
 4	Experiment_2	2	70	70	72	10	11	1.02	13.05	Agree or disagree (run4-experiment1-batch2-70-70)	Agree or disagree (run4-experiment1-batch2-70-70)	yes	yes	yes	yes	yes		
 4	Experiment_2	3	70	70	72	10	11 (7 questions/minute)	1.02	13.05	Agree or disagree (run4-experiment1-batch3-70-70)	Agree or disagree (run4-experiment1-batch3-70-70)	yes						
+4	Experiment_2	4	70	70	76	10	12	1.08	14.4	Agree or disagree (run4-experiment2-batch4-70-70)	Agree or disagree (run4-experiment2-batch4-70-70)							
+4	Experiment_2	5	70	70	76	10	12	1.08	14.4	Agree or disagree (run4-experiment2-batch5-70-70)	Agree or disagree (run4-experiment2-batch5-70-70)							
+4	Experiment_2	6	70	70	72	10	10	1.09		Agree or disagree (run4-experiment2-batch6-70-70)	Agree or disagree (run4-experiment2-batch6-70-70)						adapted payment caculation based on minimum wage UK (8.21 pounds/hour)	
