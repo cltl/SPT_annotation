@@ -205,6 +205,7 @@ def suggest_cost(n_questions):
     estimated_time = (n_questions * time_per_question_seconds) / 60
     print(f'estimated time: {estimated_time} minutes')
     print(f'suggested price: {final}')
+    return final, estimated_time
 
 
 def print_task_intro(run):
@@ -227,10 +228,15 @@ def print_task_intro(run):
         print('\n----- Instructions ------\n')
         print(text_instructions)
 
+def update_log(new_log_dict):
+    path = '../task_set_up/experiment_log.csv'
+    log_dicts = read_csv(path)
+    log_dicts.append(new_log_dict)
+    to_csv(path, log_dicts)
+    print(f'updated log: {path}')
 
-
-def create_new_batch(run, experiment_name, url, n_qu=70, test=False):
-
+def create_new_batch(run, experiment_name, url, n_participants, n_qu=70, test=False):
+    exp_dict = dict()
     input_dicts, batch_numbers = read_input(run, experiment_name)
     question_path = f'../questions/run{run}-all-restricted_True.csv'
     question_dicts = read_csv(question_path)
@@ -293,7 +299,33 @@ def create_new_batch(run, experiment_name, url, n_qu=70, test=False):
     print(pl_n)
     print_task_intro(run)
     print(f'\nCost suggestion for {len(new_batch)} questions:\n')
-    suggest_cost(len(new_batch))
+    sug_cost, t = suggest_cost(len(new_batch))
+
+    total_cost_no_fee = sug_cost * n_participants
+    # fill log dict:
+    exp_dict['name_lingoturk'] = pl_n
+    exp_dict['name_prolific'] = pl_n
+    exp_dict['group'] = experiment_name
+    exp_dict['batch'] = current_batch_n
+    exp_dict['run'] = run
+    exp_dict['n_questions'] = n_qu
+    exp_dict['n_questions_batch'] = len(new_batch)
+    exp_dict['n_participants'] = n_participants
+    exp_dict['minutes_planned'] = t
+    exp_dict['reward (pounds)'] = sug_cost
+    total_cost = float(input('Enter total cost shown on Prolific: '))
+    exp_dict['total_cost (pounds)'] =  total_cost
+    print(f'Prolific charges {float(total_cost) - total_cost_no_fee} pounds fees.')
+    exp_dict['posted'] = 'yes'
+    exp_dict['results_downloaded'] = ''
+    exp_dict['summary downloaded'] = ''
+    exp_dict['approved'] = ''
+    exp_dict['comment'] = ''
+    exp_dict['Code'] = url
+    if test == False:
+        update_log(exp_dict)
+
+
 
 
 
@@ -303,15 +335,16 @@ def main():
     run = sys.argv[1]
     experiment_name = 'experiment2'
     url = sys.argv[2]
-    purpose = sys.argv[3]
+    n_participants = int(sys.argv[3])
+
     #url = 'test'
     #purpose = 'test'
-    if purpose == 'test':
+    if url == 'TEST':
         test = True
-    elif purpose == 'batch':
+    elif url != 'TEST':
         test = False
 
-    create_new_batch(run, experiment_name, url, n_qu=70, test = test)
+    create_new_batch(run, experiment_name, url, n_participants, n_qu=70, test=test)
 
 if __name__ == '__main__':
     main()

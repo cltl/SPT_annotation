@@ -1,4 +1,4 @@
-<p> Please decide wether you agree or disagree with the statement. The statements contain descriptions of things or concepts.  </p>
+<p> Please decide whether you agree or disagree with the statement. The statements contain descriptions of things or concepts.  </p>
 
 <p> Please follow these guidelines when working on the task: </p>
 
