@@ -28,6 +28,7 @@ def read_input(run, experiment_name):
                     batch_numbers.append(batch_n)
     return all_input_dicts, batch_numbers
 
+
 def collect_not_annotated(input_dicts, question_dicts):
 
     questions_not_annotated = []
@@ -227,6 +228,14 @@ def print_task_intro(run):
     if print_instructions == 'y':
         print('\n----- Instructions ------\n')
         print(text_instructions)
+    print_whitelist = input("Print whitelist (y/n)?")
+    if print_whitelist == 'y':
+        with open('../task_set_up/whitelist.txt') as infile:
+            whitelist = infile.read()
+        print('------- Whitelist--------')
+        print(whitelist)
+    return print_whitelist
+
 
 def update_log(new_log_dict):
     path = '../task_set_up/experiment_log.csv'
@@ -297,7 +306,8 @@ def create_new_batch(run, experiment_name, url, n_participants, n_qu=70, test=Fa
     print(f'New batch written to: {batch_path}')
     pl_n = f'Agree or disagree (run{run}-{experiment_name}-batch{current_batch_n}-{n_qu}-{n_qu})'
     print(pl_n)
-    print_task_intro(run)
+    p_whitelist = print_task_intro(run)
+    print('\n------ Cost ---------')
     print(f'\nCost suggestion for {len(new_batch)} questions:\n')
     sug_cost, t = suggest_cost(len(new_batch))
 
@@ -322,6 +332,7 @@ def create_new_batch(run, experiment_name, url, n_participants, n_qu=70, test=Fa
     exp_dict['approved'] = ''
     exp_dict['comment'] = ''
     exp_dict['Code'] = url
+    exp_dict['whitelist'] = p_whitelist
     if test == False:
         update_log(exp_dict)
 

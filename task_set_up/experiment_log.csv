@@ -1,145 +1,154 @@
-run	group	batch	n_questions	n_questions_sublist	n_questions_batch	n_participants	minutes_planned	reward (pounds)	total_cost (pounds)	name_lingoturk	name_prolific	posted	results_downloaded	results_extracted	summary downloaded	approved	comment	Code
-1	Experiment_1	0	30	30	30	5	6	0.55	3.85	True or false (run1-experiment1-batch0-30-30)	True or false?	yes	yes	yes	yes	yes	check how much time people spend	 then try 60 questions
-1	Experiment_1	0	60	60	67	5	9 ((2*4)+1)	0.83	5.81	True or false (run1-experiment1-batch0-60-60)	True or false?	yes	yes	yes	yes	yes	attention checks not added - fixed in the code	
-1	Experiment_1	0	70	70	71	5	7	0.65	4.55	True or false (run1-experiment1-batch0-70-70)	True or false?	yes	yes	yes	yes	yes	weird quotation marks - fixed for next batchs (in add_prolific_url.py)	
-1	Experiment_1	1	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch1-70-70)	True or false?	yes	yes	yes	yes	yes	not enough time	
-1	Experiment_1	2	70	70	71	5	11(6.5 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch2-70-70)	True or false?	yes	yes	yes	yes	yes	fixed wrong part example	
-1	Experiment_1	0	140	70	146	5	11 (7 questions/minute)	1.02	14.28	True or false (run1-experiment1-batch0-140-70)	True or false?	yes	yes	yes	yes	yes	most annotators did both batches - not really fair...	
-1	Experiment_1	0	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch0-70-70-new)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	1	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch1-70-70-new)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	2	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch2-70-70-new)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	3	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch3_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	4	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch4_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	5	70	70	75	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch5_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	6	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch6_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	7	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch7_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	8	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch8_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	9	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch9_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	10	70	70	72	5	10	0.92	6.44	True or false (run1-experiment1-batch10_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	11	70	70	74	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch11_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	12	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch12_1-70-70)	True or false?	yes	yes	yes	yes	yes	REJECTED one participant because the study was completed in 25 seconds - active again - redownload when done	
-1	Experiment_1	13	70	70	78	5	11 (7 questions/minute)	1.02	7.44	True or false (run1-experiment1-batch13_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	14	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch14_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	15	70	70	78	5	11 (7 questions/minute)	1.02	7.44	True or false (run1-experiment1-batch15_1-70-70)	True or false?	yes	yes	yes	yes	yes	Feedback on rejectionaparently bug in lingoturk... too many submissions at the same time? 	
-1	Experiment_1	16	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch16_1-70-70)	True or false?	yes	yes	yes	yes	yes	rejected one participant 	
-1	Experiment_1	17	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch17_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	18	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch18_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	19	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch19_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	20	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch20_1-70-70)	True or false?	yes	yes	yes	yes	yes		
-1	Experiment_1	21	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch21_1-70-70)	True or false (run1-experiment1-batch21_1-70-70)	yes	yes	yes	yes	yes	 rejected task updated and downloaded	
-1	Experiment_1	22	70	70	77	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch22_1-70-70)	True or false (run1-experiment1-batch22_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	23	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch23_1-70-70)	True or false (run1-experiment1-batch23_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	24	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch24_1-70-70)	True or false (run1-experiment1-batch24_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	25	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch25_1-70-70)	True or false (run1-experiment1-batch25_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	26	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch26_1-70-70)	True or false (run1-experiment1-batch26_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	27	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch27_1-70-70)	True or false (run1-experiment1-batch27_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	28	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch28_1-70-70)	True or false (run1-experiment1-batch28_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	29	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch29_1-70-70)	True or false (run1-experiment1-batch29_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	30	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch30_1-70-70)	True or false (run1-experiment1-batch30_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	31	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch31_1-70-70)	True or false (run1-experiment1-batch31_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	32	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch32_1-70-70)	True or false (run1-experiment1-batch32_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	33	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch33_1-70-70)	True or false (run1-experiment1-batch33_1-70-70)	yes	yes				NOCODE submission - emailed worker - needs to be downloaded again. 	
-1	Experiment_1	34	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch34_1-70-70)	True or false (run1-experiment1-batch34_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	35	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch35_1-70-70)	True or false (run1-experiment1-batch35_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	36	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch36_1-70-70)	True or false (run1-experiment1-batch36_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	37	70	70	74	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch37_1-70-70)	True or false (run1-experiment1-batch37_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	38	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch38_1-70-70)	True or false (run1-experiment1-batch38_1-70-70)	yes	yes	yes	yes	yes	Monika: 5c91321c0375460001034cb8 - wrote Biuro Raj - done	
-1	Experiment_1	39	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch39_1-70-70)	True or false (run1-experiment1-batch39_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	40	70	70	75	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch40_1-70-70)	True or false (run1-experiment1-batch40_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	41	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch41_1-70-70)	True or false (run1-experiment1-batch41_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	42	70	70	78	5		1.02	7.14	True or false (run1-experiment1-batch42_1-70-70)	True or false (run1-experiment1-batch42_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	43	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch43_1-70-70)	True or false (run1-experiment1-batch43_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	44	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch44_1-70-70)	True or false (run1-experiment1-batch44_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	45	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch45_1-70-70)	True or false (run1-experiment1-batch45_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	46	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch46_1-70-70)	True or false (run1-experiment1-batch46_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	47	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch47_1-70-70)	True or false (run1-experiment1-batch47_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	48	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch48_1-70-70)	True or false (run1-experiment1-batch48_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	49	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch49_1-70-70)	True or false (run1-experiment1-batch49_1-70-70)	yes	yes	yes	yes	yes		
-1	Experiment_1	50	70	70	8	5	1	0.1	0.7	True or false (run1-experiment1-batch50_1-70-70)	True or false (run1-experiment1-batch50_1-70-70)	yes	yes	yes	yes	yes		
-2	Experiment_1	0	70	70	80	5	11 (7 questions/minute)	1.02		Agree or disagree (run2-experiment1-batch0-70-70)	Agree or disagree (run2-experiment1-batch0-70-70)	yes	yes	yes	yes	yes		
-2	Experiment_1	0	70	70	80	10	11 (7 questions/minute)	1.02		Agree or disagree (run2-experiment1-batch0-70-70_new)	Agree or disagree (run2-experiment1-batch0-70-70_new)	yes	yes	yes	yes	yes		
-3	Experiment_1	0	70	70	81	10	12	1.11	14.8	Agree or disagree (run3-experiment1-batch0-70-70)	Agree or disagree (run3-experiment1-batch0-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	1	70	70	76	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch1-70-70)	Agree or disagree (run3-experiment1-batch1-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	2	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch2-70-70)	Agree or disagree (run3-experiment1-batch2-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	3	70	70	75	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch3-70-70)	Agree or disagree (run3-experiment1-batch3-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	4	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch4-70-70)	Agree or disagree (run3-experiment1-batch4-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	5	70	70	80	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch5-70-70)	Agree or disagree (run3-experiment1-batch5-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	6	70	70	79	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch6-70-70)	Agree or disagree (run3-experiment1-batch6-70-70)	yes	yes	yes	yes	yes	warned worker 5c1d4d88508cfd000103dc47 because of many contradictions	
-3	Experiment_1	7	70	70	80	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch7-70-70)	Agree or disagree (run3-experiment1-batch7-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	8	70	70	80	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch8-70-70)	Agree or disagree (run3-experiment1-batch8-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	9	70	70	75	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch9-70-70)	Agree or disagree (run3-experiment1-batch9-70-70)	yes	yes	yes	yes	yes	change beer example to a different color (green might be an actual St. Patrick's day association)	 add warning to instructions
-3	Experiment_1	10	70	70	75	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch10-70-70)	Agree or disagree (run3-experiment1-batch10-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	11	70	70	79	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch11-70-70)	Agree or disagree (run3-experiment1-batch11-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	12	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch12-70-70)	Agree or disagree (run3-experiment1-batch12-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	13	70	70	76	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch13-70-70)	Agree or disagree (run3-experiment1-batch13-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	14	70	70	75	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch14-70-70)	Agree or disagree (run3-experiment1-batch14-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	15	70	70	80	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch15-70-70)	Agree or disagree (run3-experiment1-batch15-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	16	70	70	79	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch16-70-70)	Agree or disagree (run3-experiment1-batch16-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	17	70	70	80	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch17-70-70)	Agree or disagree (run3-experiment1-batch17-70-70)	yes	yes	yes	yes	yes	updated examples - test questions missing from this batch	
-3	Experiment_1	18	70	70	80	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch18-70-70)	Agree or disagree (run3-experiment1-batch18-70-70)	yes	yes	yes	yes	yes	fixed test questions 	
-3	Experiment_1	19	70	70	75	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch19-70-70)	Agree or disagree (run3-experiment1-batch19-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	20	70	70	74	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch20-70-70)	Agree or disagree (run3-experiment1-batch20-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	21	70	70	73	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch21-70-70)	Agree or disagree (run3-experiment1-batch21-70-70)	yes	yes	yes	yes	yes	fixed single-question bug	
-3	Experiment_1	22	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch22-70-70)	Agree or disagree (run3-experiment1-batch22-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	23	70	70	68	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch23-70-70)	Agree or disagree (run3-experiment1-batch23-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	24	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch24-70-70)	Agree or disagree (run3-experiment1-batch24-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	25	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch25-70-70)	Agree or disagree (run3-experiment1-batch25-70-70)	yes	yes	yes	yes	yes	first batch from new repository: SPT_annotation	
-3	Experiment_1	26	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch26-70-70)	Agree or disagree (run3-experiment1-batch26-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	27	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch27-70-70)	Agree or disagree (run3-experiment1-batch27-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	28	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch28-70-70)	Agree or disagree (run3-experiment1-batch28-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	29	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch29-70-70)	Agree or disagree (run3-experiment1-batch29-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	30	70	70	78	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch30-70-70)	Agree or disagree (run3-experiment1-batch30-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	31	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch31-70-70)	Agree or disagree (run3-experiment1-batch31-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	32	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch32-70-70)	Agree or disagree (run3-experiment1-batch32-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	33	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch33-70-70)	Agree or disagree (run3-experiment1-batch33-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	34	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch34-70-70)	Agree or disagree (run3-experiment1-batch34-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	35	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch35-70-70)	Agree or disagree (run3-experiment1-batch35-70-70)	yes	yes	yes	yes	yes	started encouraging good workers to continue working on this task	
-3	Experiment_1	36	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch36-70-70)	Agree or disagree (run3-experiment1-batch36-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	37	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch37-70-70)	Agree or disagree (run3-experiment1-batch37-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	38	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch38-70-70)	Agree or disagree (run3-experiment1-batch38-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	39	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch39-70-70)	Agree or disagree (run3-experiment1-batch39-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	40	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch40-70-70)	Agree or disagree (run3-experiment1-batch40-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	41	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch41-70-70)	Agree or disagree (run3-experiment1-batch41-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	42	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch42-70-70)	Agree or disagree (run3-experiment1-batch42-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	43	70	70	74	10	11 (7 questions/minute)	1.02	13.06	Agree or disagree (run3-experiment1-batch43-70-70)	Agree or disagree (run3-experiment1-batch43-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	44	70	70	78	10	11 (7 questions/minute)	1.02	13.06	Agree or disagree (run3-experiment1-batch44-70-70)	Agree or disagree (run3-experiment1-batch44-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	45	70	70	78	10	11 (7 questions/minute)	1.02	13.06	Agree or disagree (run3-experiment1-batch45-70-70)	Agree or disagree (run3-experiment1-batch45-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	46	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch46-70-70)	Agree or disagree (run3-experiment1-batch46-70-70)	yes	yes	yes	yes	yes		
-3	Experiment_1	47	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch47-70-70)	Agree or disagree (run3-experiment1-batch47-70-70)	yes	yes	yes	yes	yes	applied pre-filtering: only participants fluent in English - much better results  - test if this holds	
-3	Experiment_1	48	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch48-70-70)	Agree or disagree (run3-experiment1-batch48-70-70)	yes	yes	yes	yes	yes	fluent English	
-3	Experiment_1	49	70	70	78	10	10	1.02	13.05	Agree or disagree (run3-experiment1-batch49-70-70)	Agree or disagree (run3-experiment1-batch49-70-70)	yes	yes	yes	yes	yes	fluent English	
-3	Experiment_1	50	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch50-70-70)	Agree or disagree (run3-experiment1-batch50-70-70)	yes	yes	yes	yes	yes	fluent English	
-			70	70	78	10	11 (7 questions/minute)	1.02	13.05	Agree or disagree (run3-experiment1-batch51-70-70)	Agree or disagree (run3-experiment1-batch51-70-70)	yes	yes	yes	yes	yes	f	
-			67	67	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch52-67-67)	Agree or disagree (run3-experiment1-batch52-67-67)	yes	yes	yes	yes	yes		
-			67	67	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch53-67-67)	Agree or disagree (run3-experiment1-batch53-67-67)	yes	yes	yes	yes	yes		
-			67	67	70	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch54-67-67)	Agree or disagree (run3-experiment1-batch54-67-67)	yes	yes	yes	yes	yes		
-			67	67	64	10	9	0.83	11.07	Agree or disagree (run3-experiment1-batch55-67-67)	Agree or disagree (run3-experiment1-batch55-67-67)	yes	yes	yes	yes	yes		
-					72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch56-67-67)	Agree or disagree (run3-experiment1-batch56-67-67)	yes	yes	yes	yes	yes		
-					72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch57-70-70)	Agree or disagree (run3-experiment1-batch57-70-70)	yes	yes	yes	yes	yes		
-					48	10	10	0.65	12.27	Agree or disagree (run3-experiment1-batch58-70-70)	Agree or disagree (run3-experiment1-batch58-70-70)	yes	yes	yes	yes	yes		
-4	Experiment_2	1	70	70	72	10	10	0.92	12.27	Agree or disagree (run4-experiment1-batch1-70-70)	Agree or disagree (run4-experiment1-batch1-70-70)	yes	yes	yes	yes	yes	high quality workers all took more than 10 minutes. I think we have to change the time indication a bit.	
-4	Experiment_2	2	70	70	72	10	11	1.02	13.05	Agree or disagree (run4-experiment1-batch2-70-70)	Agree or disagree (run4-experiment1-batch2-70-70)	yes	yes	yes	yes	yes		
-4	Experiment_2	3	70	70	72	10	11 (7 questions/minute)	1.02	13.05	Agree or disagree (run4-experiment1-batch3-70-70)	Agree or disagree (run4-experiment1-batch3-70-70)	yes	yes	yes	yes	yes		
-4	Experiment_2	4	70	70	76	10	12	1.08	14.4	Agree or disagree (run4-experiment2-batch4-70-70)	Agree or disagree (run4-experiment2-batch4-70-70)	yes	yes	yes	yes	yes		
-4	Experiment_2	5	70	70	76	10	12	1.08	14.4	Agree or disagree (run4-experiment2-batch5-70-70)	Agree or disagree (run4-experiment2-batch5-70-70)	yes	yes	yes	yes	yes		
-4	Experiment_2	6	70	70	72	10	10	1.09	14.54	Agree or disagree (run4-experiment2-batch6-70-70)	Agree or disagree (run4-experiment2-batch6-70-70)	yes	yes	yes	yes	yes	adapted payment caculation based on minimum wage UK (8.21 pounds/hour)	
-4	Experiment_2	7	70	70	77	10	10	1.15	15.34	Agree or disagree (run4-experiment2-batch7-70-70)	Agree or disagree (run4-experiment2-batch7-70-70)	yes	yes	yes	yes	yes		
-4	Experiment_2	8	70	70	78	10	10	1.18	15.47	Agree or disagree (run4-experiment2-batch8-70-70)	Agree or disagree (run4-experiment2-batch8-70-70)	yes	yes	yes	yes	yes		
-4	Experiment_2	9	70	70	72	10	10	1.09	14.54	Agree or disagree (run4-experiment2-batch9-70-70)	Agree or disagree (run4-experiment2-batch9-70-70)	yes	yes	yes	yes	yes		
-4	Experiment_2	10	70	70	72	10	10	1.09	14.54	Agree or disagree (run4-experiment2-batch10-70-70)	Agree or disagree (run4-experiment2-batch10-70-70)	yes						
-4	experiment2	11	70	70	76	10	10.1333333333	1.1526666667	15.34	Agree or disagree (run4-experiment2-batch11-70-70)	Agree or disagree (run4-experiment2-batch11-70-70)	yes						https://app.prolific.co/submissions/complete?cc=4CE57169
-4	experiment2	12	70		72	10	9.6	1.0919999999999999	14.54	Agree or disagree (run4-experiment2-batch12-70-70)	Agree or disagree (run4-experiment2-batch12-70-70)	yes						https://app.prolific.co/submissions/complete?cc=4ED188C0
-4	experiment2	13	70		76	10	10.133333333333333	1.1526666666666665	15.34	Agree or disagree (run4-experiment2-batch13-70-70)	Agree or disagree (run4-experiment2-batch13-70-70)	yes						https://app.prolific.co/submissions/complete?cc=45FE20B0
-4	experiment2	14	70		72	10	9.6	1.0919999999999999	14.54	Agree or disagree (run4-experiment2-batch14-70-70)	Agree or disagree (run4-experiment2-batch14-70-70)	yes						https://app.prolific.co/submissions/complete?cc=4C7ED9C9
-4	experiment2	15	70		76	10	10.133333333333333	1.1526666666666665	15.34	Agree or disagree (run4-experiment2-batch15-70-70)	Agree or disagree (run4-experiment2-batch15-70-70)	yes						https://app.prolific.co/submissions/complete?cc=5D88FF27
-4	experiment2	16	70		76	10	10.133333333333333	1.1526666666666665	15.34	Agree or disagree (run4-experiment2-batch16-70-70)	Agree or disagree (run4-experiment2-batch16-70-70)	yes						https://app.prolific.co/submissions/complete?cc=274BCD71
-4	experiment2	17	70		72	10	9.6	1.0919999999999999	14.54	Agree or disagree (run4-experiment2-batch17-70-70)	Agree or disagree (run4-experiment2-batch17-70-70)	yes						https://app.prolific.co/submissions/complete?cc=7CD84CEB
-4	experiment2	18	70		74	10	9.866666666666667	1.1223333333333332	14.94	Agree or disagree (run4-experiment2-batch18-70-70)	Agree or disagree (run4-experiment2-batch18-70-70)	yes						https://app.prolific.co/submissions/complete?cc=6F86CD4A
-4	experiment2	19	70		72	10	9.6	1.0919999999999999	14.54	Agree or disagree (run4-experiment2-batch19-70-70)	Agree or disagree (run4-experiment2-batch19-70-70)	yes						https://app.prolific.co/submissions/complete?cc=68413E16
-4	experiment2	20	70		74	10	9.866666666666667	1.1223333333333332	14.94	Agree or disagree (run4-experiment2-batch20-70-70)	Agree or disagree (run4-experiment2-batch20-70-70)	yes						https://app.prolific.co/submissions/complete?cc=4CD22441
-4	experiment2	21	70		72	10	9.6	1.0919999999999999	14.54	Agree or disagree (run4-experiment2-batch21-70-70)	Agree or disagree (run4-experiment2-batch21-70-70)	yes						https://app.prolific.co/submissions/complete?cc=2B817CD0
-4	experiment2	22	70		78	10	10.4	1.1829999999999998	15.74	Agree or disagree (run4-experiment2-batch22-70-70)	Agree or disagree (run4-experiment2-batch22-70-70)	yes						https://app.prolific.co/submissions/complete?cc=80193A08
-4	experiment2	23	70		76	10	10.133333333333333	1.1526666666666665	15.34	Agree or disagree (run4-experiment2-batch23-70-70)	Agree or disagree (run4-experiment2-batch23-70-70)	yes						https://app.prolific.co/submissions/complete?cc=81FFB5EE
-4	experiment2	24	70		76	10	10.133333333333333	1.1526666666666665	15.34	Agree or disagree (run4-experiment2-batch24-70-70)	Agree or disagree (run4-experiment2-batch24-70-70)	yes						https://app.prolific.co/submissions/complete?cc=6E22BBA0
-4	experiment2	25	70		72	10	9.6	1.0919999999999999	14.54	Agree or disagree (run4-experiment2-batch25-70-70)	Agree or disagree (run4-experiment2-batch25-70-70)	yes						https://app.prolific.co/submissions/complete?cc=2CBCD767
-4	experiment2	26	70		78	10	10.4	1.1829999999999998	15.74	Agree or disagree (run4-experiment2-batch26-70-70)	Agree or disagree (run4-experiment2-batch26-70-70)	yes						https://app.prolific.co/submissions/complete?cc=764B3989
+run	group	batch	n_questions	n_questions_sublist	n_questions_batch	n_participants	minutes_planned	reward (pounds)	total_cost (pounds)	name_lingoturk	name_prolific	posted	results_downloaded	results_extracted	summary downloaded	approved	comment	Code	whitelist
+1	Experiment_1	0	30	30	30	5	6	0.55	3.85	True or false (run1-experiment1-batch0-30-30)	True or false?	yes	yes	yes	yes	yes	check how much time people spend	 then try 60 questions	n
+1	Experiment_1	0	60	60	67	5	9 ((2*4)+1)	0.83	5.81	True or false (run1-experiment1-batch0-60-60)	True or false?	yes	yes	yes	yes	yes	attention checks not added - fixed in the code		n
+1	Experiment_1	0	70	70	71	5	7	0.65	4.55	True or false (run1-experiment1-batch0-70-70)	True or false?	yes	yes	yes	yes	yes	weird quotation marks - fixed for next batchs (in add_prolific_url.py)		n
+1	Experiment_1	1	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch1-70-70)	True or false?	yes	yes	yes	yes	yes	not enough time		n
+1	Experiment_1	2	70	70	71	5	11(6.5 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch2-70-70)	True or false?	yes	yes	yes	yes	yes	fixed wrong part example		n
+1	Experiment_1	0	140	70	146	5	11 (7 questions/minute)	1.02	14.28	True or false (run1-experiment1-batch0-140-70)	True or false?	yes	yes	yes	yes	yes	most annotators did both batches - not really fair...		n
+1	Experiment_1	0	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch0-70-70-new)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	1	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch1-70-70-new)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	2	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch2-70-70-new)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	3	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch3_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	4	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch4_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	5	70	70	75	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch5_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	6	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch6_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	7	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch7_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	8	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch8_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	9	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch9_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	10	70	70	72	5	10	0.92	6.44	True or false (run1-experiment1-batch10_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	11	70	70	74	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch11_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	12	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch12_1-70-70)	True or false?	yes	yes	yes	yes	yes	REJECTED one participant because the study was completed in 25 seconds - active again - redownload when done		n
+1	Experiment_1	13	70	70	78	5	11 (7 questions/minute)	1.02	7.44	True or false (run1-experiment1-batch13_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	14	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch14_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	15	70	70	78	5	11 (7 questions/minute)	1.02	7.44	True or false (run1-experiment1-batch15_1-70-70)	True or false?	yes	yes	yes	yes	yes	Feedback on rejectionaparently bug in lingoturk... too many submissions at the same time? 		n
+1	Experiment_1	16	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch16_1-70-70)	True or false?	yes	yes	yes	yes	yes	rejected one participant 		n
+1	Experiment_1	17	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch17_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	18	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch18_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	19	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch19_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	20	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch20_1-70-70)	True or false?	yes	yes	yes	yes	yes			n
+1	Experiment_1	21	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch21_1-70-70)	True or false (run1-experiment1-batch21_1-70-70)	yes	yes	yes	yes	yes	 rejected task updated and downloaded		n
+1	Experiment_1	22	70	70	77	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch22_1-70-70)	True or false (run1-experiment1-batch22_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	23	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch23_1-70-70)	True or false (run1-experiment1-batch23_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	24	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch24_1-70-70)	True or false (run1-experiment1-batch24_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	25	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch25_1-70-70)	True or false (run1-experiment1-batch25_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	26	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch26_1-70-70)	True or false (run1-experiment1-batch26_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	27	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch27_1-70-70)	True or false (run1-experiment1-batch27_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	28	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch28_1-70-70)	True or false (run1-experiment1-batch28_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	29	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch29_1-70-70)	True or false (run1-experiment1-batch29_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	30	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch30_1-70-70)	True or false (run1-experiment1-batch30_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	31	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch31_1-70-70)	True or false (run1-experiment1-batch31_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	32	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch32_1-70-70)	True or false (run1-experiment1-batch32_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	33	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch33_1-70-70)	True or false (run1-experiment1-batch33_1-70-70)	yes	yes				NOCODE submission - emailed worker - needs to be downloaded again. 		n
+1	Experiment_1	34	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch34_1-70-70)	True or false (run1-experiment1-batch34_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	35	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch35_1-70-70)	True or false (run1-experiment1-batch35_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	36	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch36_1-70-70)	True or false (run1-experiment1-batch36_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	37	70	70	74	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch37_1-70-70)	True or false (run1-experiment1-batch37_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	38	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch38_1-70-70)	True or false (run1-experiment1-batch38_1-70-70)	yes	yes	yes	yes	yes	Monika: 5c91321c0375460001034cb8 - wrote Biuro Raj - done		n
+1	Experiment_1	39	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch39_1-70-70)	True or false (run1-experiment1-batch39_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	40	70	70	75	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch40_1-70-70)	True or false (run1-experiment1-batch40_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	41	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch41_1-70-70)	True or false (run1-experiment1-batch41_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	42	70	70	78	5		1.02	7.14	True or false (run1-experiment1-batch42_1-70-70)	True or false (run1-experiment1-batch42_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	43	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch43_1-70-70)	True or false (run1-experiment1-batch43_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	44	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch44_1-70-70)	True or false (run1-experiment1-batch44_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	45	70	70	78	5	11 (7 questions/minute)	1.02	7.14	True or false (run1-experiment1-batch45_1-70-70)	True or false (run1-experiment1-batch45_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	46	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch46_1-70-70)	True or false (run1-experiment1-batch46_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	47	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch47_1-70-70)	True or false (run1-experiment1-batch47_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	48	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch48_1-70-70)	True or false (run1-experiment1-batch48_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	49	70	70	71	5	10	0.92	6.44	True or false (run1-experiment1-batch49_1-70-70)	True or false (run1-experiment1-batch49_1-70-70)	yes	yes	yes	yes	yes			n
+1	Experiment_1	50	70	70	8	5	1	0.1	0.7	True or false (run1-experiment1-batch50_1-70-70)	True or false (run1-experiment1-batch50_1-70-70)	yes	yes	yes	yes	yes			n
+2	Experiment_1	0	70	70	80	5	11 (7 questions/minute)	1.02		Agree or disagree (run2-experiment1-batch0-70-70)	Agree or disagree (run2-experiment1-batch0-70-70)	yes	yes	yes	yes	yes			n
+2	Experiment_1	0	70	70	80	10	11 (7 questions/minute)	1.02		Agree or disagree (run2-experiment1-batch0-70-70_new)	Agree or disagree (run2-experiment1-batch0-70-70_new)	yes	yes	yes	yes	yes			n
+3	Experiment_1	0	70	70	81	10	12	1.11	14.8	Agree or disagree (run3-experiment1-batch0-70-70)	Agree or disagree (run3-experiment1-batch0-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	1	70	70	76	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch1-70-70)	Agree or disagree (run3-experiment1-batch1-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	2	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch2-70-70)	Agree or disagree (run3-experiment1-batch2-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	3	70	70	75	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch3-70-70)	Agree or disagree (run3-experiment1-batch3-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	4	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch4-70-70)	Agree or disagree (run3-experiment1-batch4-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	5	70	70	80	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch5-70-70)	Agree or disagree (run3-experiment1-batch5-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	6	70	70	79	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch6-70-70)	Agree or disagree (run3-experiment1-batch6-70-70)	yes	yes	yes	yes	yes	warned worker 5c1d4d88508cfd000103dc47 because of many contradictions		n
+3	Experiment_1	7	70	70	80	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch7-70-70)	Agree or disagree (run3-experiment1-batch7-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	8	70	70	80	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch8-70-70)	Agree or disagree (run3-experiment1-batch8-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	9	70	70	75	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch9-70-70)	Agree or disagree (run3-experiment1-batch9-70-70)	yes	yes	yes	yes	yes	change beer example to a different color (green might be an actual St. Patrick's day association)	 add warning to instructions	n
+3	Experiment_1	10	70	70	75	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch10-70-70)	Agree or disagree (run3-experiment1-batch10-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	11	70	70	79	10	11 (7 questions/minute)	1.02	13.6	Agree or disagree (run3-experiment1-batch11-70-70)	Agree or disagree (run3-experiment1-batch11-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	12	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch12-70-70)	Agree or disagree (run3-experiment1-batch12-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	13	70	70	76	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch13-70-70)	Agree or disagree (run3-experiment1-batch13-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	14	70	70	75	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch14-70-70)	Agree or disagree (run3-experiment1-batch14-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	15	70	70	80	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch15-70-70)	Agree or disagree (run3-experiment1-batch15-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	16	70	70	79	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch16-70-70)	Agree or disagree (run3-experiment1-batch16-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	17	70	70	80	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch17-70-70)	Agree or disagree (run3-experiment1-batch17-70-70)	yes	yes	yes	yes	yes	updated examples - test questions missing from this batch		n
+3	Experiment_1	18	70	70	80	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch18-70-70)	Agree or disagree (run3-experiment1-batch18-70-70)	yes	yes	yes	yes	yes	fixed test questions 		n
+3	Experiment_1	19	70	70	75	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch19-70-70)	Agree or disagree (run3-experiment1-batch19-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	20	70	70	74	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch20-70-70)	Agree or disagree (run3-experiment1-batch20-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	21	70	70	73	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch21-70-70)	Agree or disagree (run3-experiment1-batch21-70-70)	yes	yes	yes	yes	yes	fixed single-question bug		n
+3	Experiment_1	22	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch22-70-70)	Agree or disagree (run3-experiment1-batch22-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	23	70	70	68	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch23-70-70)	Agree or disagree (run3-experiment1-batch23-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	24	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch24-70-70)	Agree or disagree (run3-experiment1-batch24-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	25	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch25-70-70)	Agree or disagree (run3-experiment1-batch25-70-70)	yes	yes	yes	yes	yes	first batch from new repository: SPT_annotation		n
+3	Experiment_1	26	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch26-70-70)	Agree or disagree (run3-experiment1-batch26-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	27	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch27-70-70)	Agree or disagree (run3-experiment1-batch27-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	28	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch28-70-70)	Agree or disagree (run3-experiment1-batch28-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	29	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch29-70-70)	Agree or disagree (run3-experiment1-batch29-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	30	70	70	78	10	11 (7 questions/minute)	1.02	13.8	Agree or disagree (run3-experiment1-batch30-70-70)	Agree or disagree (run3-experiment1-batch30-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	31	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch31-70-70)	Agree or disagree (run3-experiment1-batch31-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	32	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch32-70-70)	Agree or disagree (run3-experiment1-batch32-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	33	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch33-70-70)	Agree or disagree (run3-experiment1-batch33-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	34	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch34-70-70)	Agree or disagree (run3-experiment1-batch34-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	35	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch35-70-70)	Agree or disagree (run3-experiment1-batch35-70-70)	yes	yes	yes	yes	yes	started encouraging good workers to continue working on this task		n
+3	Experiment_1	36	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch36-70-70)	Agree or disagree (run3-experiment1-batch36-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	37	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch37-70-70)	Agree or disagree (run3-experiment1-batch37-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	38	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch38-70-70)	Agree or disagree (run3-experiment1-batch38-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	39	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch39-70-70)	Agree or disagree (run3-experiment1-batch39-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	40	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch40-70-70)	Agree or disagree (run3-experiment1-batch40-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	41	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch41-70-70)	Agree or disagree (run3-experiment1-batch41-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	42	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch42-70-70)	Agree or disagree (run3-experiment1-batch42-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	43	70	70	74	10	11 (7 questions/minute)	1.02	13.06	Agree or disagree (run3-experiment1-batch43-70-70)	Agree or disagree (run3-experiment1-batch43-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	44	70	70	78	10	11 (7 questions/minute)	1.02	13.06	Agree or disagree (run3-experiment1-batch44-70-70)	Agree or disagree (run3-experiment1-batch44-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	45	70	70	78	10	11 (7 questions/minute)	1.02	13.06	Agree or disagree (run3-experiment1-batch45-70-70)	Agree or disagree (run3-experiment1-batch45-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	46	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch46-70-70)	Agree or disagree (run3-experiment1-batch46-70-70)	yes	yes	yes	yes	yes			n
+3	Experiment_1	47	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch47-70-70)	Agree or disagree (run3-experiment1-batch47-70-70)	yes	yes	yes	yes	yes	applied pre-filtering: only participants fluent in English - much better results  - test if this holds		n
+3	Experiment_1	48	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch48-70-70)	Agree or disagree (run3-experiment1-batch48-70-70)	yes	yes	yes	yes	yes	fluent English		n
+3	Experiment_1	49	70	70	78	10	10	1.02	13.05	Agree or disagree (run3-experiment1-batch49-70-70)	Agree or disagree (run3-experiment1-batch49-70-70)	yes	yes	yes	yes	yes	fluent English		n
+3	Experiment_1	50	70	70	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch50-70-70)	Agree or disagree (run3-experiment1-batch50-70-70)	yes	yes	yes	yes	yes	fluent English		n
+			70	70	78	10	11 (7 questions/minute)	1.02	13.05	Agree or disagree (run3-experiment1-batch51-70-70)	Agree or disagree (run3-experiment1-batch51-70-70)	yes	yes	yes	yes	yes	f		n
+			67	67	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch52-67-67)	Agree or disagree (run3-experiment1-batch52-67-67)	yes	yes	yes	yes	yes			n
+			67	67	72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch53-67-67)	Agree or disagree (run3-experiment1-batch53-67-67)	yes	yes	yes	yes	yes			n
+			67	67	70	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch54-67-67)	Agree or disagree (run3-experiment1-batch54-67-67)	yes	yes	yes	yes	yes			n
+			67	67	64	10	9	0.83	11.07	Agree or disagree (run3-experiment1-batch55-67-67)	Agree or disagree (run3-experiment1-batch55-67-67)	yes	yes	yes	yes	yes			n
+					72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch56-67-67)	Agree or disagree (run3-experiment1-batch56-67-67)	yes	yes	yes	yes	yes			n
+					72	10	10	0.92	12.27	Agree or disagree (run3-experiment1-batch57-70-70)	Agree or disagree (run3-experiment1-batch57-70-70)	yes	yes	yes	yes	yes			n
+					48	10	10	0.65	12.27	Agree or disagree (run3-experiment1-batch58-70-70)	Agree or disagree (run3-experiment1-batch58-70-70)	yes	yes	yes	yes	yes			n
+4	Experiment_2	1	70	70	72	10	10	0.92	12.27	Agree or disagree (run4-experiment1-batch1-70-70)	Agree or disagree (run4-experiment1-batch1-70-70)	yes	yes	yes	yes	yes	high quality workers all took more than 10 minutes. I think we have to change the time indication a bit.		n
+4	Experiment_2	2	70	70	72	10	11	1.02	13.05	Agree or disagree (run4-experiment1-batch2-70-70)	Agree or disagree (run4-experiment1-batch2-70-70)	yes	yes	yes	yes	yes			n
+4	Experiment_2	3	70	70	72	10	11 (7 questions/minute)	1.02	13.05	Agree or disagree (run4-experiment1-batch3-70-70)	Agree or disagree (run4-experiment1-batch3-70-70)	yes	yes	yes	yes	yes			n
+4	Experiment_2	4	70	70	76	10	12	1.08	14.4	Agree or disagree (run4-experiment2-batch4-70-70)	Agree or disagree (run4-experiment2-batch4-70-70)	yes	yes	yes	yes	yes			n
+4	Experiment_2	5	70	70	76	10	12	1.08	14.4	Agree or disagree (run4-experiment2-batch5-70-70)	Agree or disagree (run4-experiment2-batch5-70-70)	yes	yes	yes	yes	yes			n
+4	Experiment_2	6	70	70	72	10	10	1.09	14.54	Agree or disagree (run4-experiment2-batch6-70-70)	Agree or disagree (run4-experiment2-batch6-70-70)	yes	yes	yes	yes	yes	adapted payment caculation based on minimum wage UK (8.21 pounds/hour)		n
+4	Experiment_2	7	70	70	77	10	10	1.15	15.34	Agree or disagree (run4-experiment2-batch7-70-70)	Agree or disagree (run4-experiment2-batch7-70-70)	yes	yes	yes	yes	yes			n
+4	Experiment_2	8	70	70	78	10	10	1.18	15.47	Agree or disagree (run4-experiment2-batch8-70-70)	Agree or disagree (run4-experiment2-batch8-70-70)	yes	yes	yes	yes	yes			n
+4	Experiment_2	9	70	70	72	10	10	1.09	14.54	Agree or disagree (run4-experiment2-batch9-70-70)	Agree or disagree (run4-experiment2-batch9-70-70)	yes	yes	yes	yes	yes			n
+4	Experiment_2	10	70	70	72	10	10	1.09	14.54	Agree or disagree (run4-experiment2-batch10-70-70)	Agree or disagree (run4-experiment2-batch10-70-70)	yes							n
+4	experiment2	11	70	70	76	10	10.1333333333	1.1526666667	15.34	Agree or disagree (run4-experiment2-batch11-70-70)	Agree or disagree (run4-experiment2-batch11-70-70)	yes						https://app.prolific.co/submissions/complete?cc=4CE57169	n
+4	experiment2	12	70		72	10	9.6	1.092	14.54	Agree or disagree (run4-experiment2-batch12-70-70)	Agree or disagree (run4-experiment2-batch12-70-70)	yes						https://app.prolific.co/submissions/complete?cc=4ED188C0	n
+4	experiment2	13	70		76	10	10.1333333333	1.1526666667	15.34	Agree or disagree (run4-experiment2-batch13-70-70)	Agree or disagree (run4-experiment2-batch13-70-70)	yes						https://app.prolific.co/submissions/complete?cc=45FE20B0	n
+4	experiment2	14	70		72	10	9.6	1.092	14.54	Agree or disagree (run4-experiment2-batch14-70-70)	Agree or disagree (run4-experiment2-batch14-70-70)	yes						https://app.prolific.co/submissions/complete?cc=4C7ED9C9	n
+4	experiment2	15	70		76	10	10.1333333333	1.1526666667	15.34	Agree or disagree (run4-experiment2-batch15-70-70)	Agree or disagree (run4-experiment2-batch15-70-70)	yes						https://app.prolific.co/submissions/complete?cc=5D88FF27	n
+4	experiment2	16	70		76	10	10.1333333333	1.1526666667	15.34	Agree or disagree (run4-experiment2-batch16-70-70)	Agree or disagree (run4-experiment2-batch16-70-70)	yes						https://app.prolific.co/submissions/complete?cc=274BCD71	n
+4	experiment2	17	70		72	10	9.6	1.092	14.54	Agree or disagree (run4-experiment2-batch17-70-70)	Agree or disagree (run4-experiment2-batch17-70-70)	yes						https://app.prolific.co/submissions/complete?cc=7CD84CEB	n
+4	experiment2	18	70		74	10	9.8666666667	1.1223333333	14.94	Agree or disagree (run4-experiment2-batch18-70-70)	Agree or disagree (run4-experiment2-batch18-70-70)	yes						https://app.prolific.co/submissions/complete?cc=6F86CD4A	n
+4	experiment2	19	70		72	10	9.6	1.092	14.54	Agree or disagree (run4-experiment2-batch19-70-70)	Agree or disagree (run4-experiment2-batch19-70-70)	yes						https://app.prolific.co/submissions/complete?cc=68413E16	n
+4	experiment2	20	70		74	10	9.8666666667	1.1223333333	14.94	Agree or disagree (run4-experiment2-batch20-70-70)	Agree or disagree (run4-experiment2-batch20-70-70)	yes						https://app.prolific.co/submissions/complete?cc=4CD22441	n
+4	experiment2	21	70		72	10	9.6	1.092	14.54	Agree or disagree (run4-experiment2-batch21-70-70)	Agree or disagree (run4-experiment2-batch21-70-70)	yes						https://app.prolific.co/submissions/complete?cc=2B817CD0	n
+4	experiment2	22	70		78	10	10.4	1.183	15.74	Agree or disagree (run4-experiment2-batch22-70-70)	Agree or disagree (run4-experiment2-batch22-70-70)	yes						https://app.prolific.co/submissions/complete?cc=80193A08	n
+4	experiment2	23	70		76	10	10.1333333333	1.1526666667	15.34	Agree or disagree (run4-experiment2-batch23-70-70)	Agree or disagree (run4-experiment2-batch23-70-70)	yes						https://app.prolific.co/submissions/complete?cc=81FFB5EE	n
+4	experiment2	24	70		76	10	10.1333333333	1.1526666667	15.34	Agree or disagree (run4-experiment2-batch24-70-70)	Agree or disagree (run4-experiment2-batch24-70-70)	yes						https://app.prolific.co/submissions/complete?cc=6E22BBA0	n
+4	experiment2	25	70		72	10	9.6	1.092	14.54	Agree or disagree (run4-experiment2-batch25-70-70)	Agree or disagree (run4-experiment2-batch25-70-70)	yes						https://app.prolific.co/submissions/complete?cc=2CBCD767	n
+4	experiment2	26	70		78	10	10.4	1.183	15.74	Agree or disagree (run4-experiment2-batch26-70-70)	Agree or disagree (run4-experiment2-batch26-70-70)	yes						https://app.prolific.co/submissions/complete?cc=764B3989	y
+4	experiment2	27	70		74	10	9.8666666667	1.1223333333	14.94	Agree or disagree (run4-experiment2-batch27-70-70)	Agree or disagree (run4-experiment2-batch27-70-70)	yes						https://app.prolific.co/submissions/complete?cc=73EF4704	y
+4	experiment2	28	70		76	10	10.1333333333	1.1526666667	15.34	Agree or disagree (run4-experiment2-batch28-70-70)	Agree or disagree (run4-experiment2-batch28-70-70)	yes						https://app.prolific.co/submissions/complete?cc=14E0D7A0	y
+4	experiment2	29	70		72	10	9.6	1.092	14.54	Agree or disagree (run4-experiment2-batch29-70-70)	Agree or disagree (run4-experiment2-batch29-70-70)	yes						https://app.prolific.co/submissions/complete?cc=2F09CDF6	y
+4	experiment2	30	70		72	10	9.6	1.092	14.54	Agree or disagree (run4-experiment2-batch30-70-70)	Agree or disagree (run4-experiment2-batch30-70-70)	yes							y
+4	experiment2	31	70		72	10	9.6	1.092	14.54	Agree or disagree (run4-experiment2-batch31-70-70)	Agree or disagree (run4-experiment2-batch31-70-70)	yes						https://app.prolific.co/submissions/complete?cc=7C045683	y
+4	experiment2	32	70		72	10	9.6	1.092	14.54	Agree or disagree (run4-experiment2-batch32-70-70)	Agree or disagree (run4-experiment2-batch32-70-70)	yes						https://app.prolific.co/submissions/complete?cc=57AB71C3	y
+4	experiment2	33	70		78	10	10.4	1.183	15.74	Agree or disagree (run4-experiment2-batch33-70-70)	Agree or disagree (run4-experiment2-batch33-70-70)	yes						https://app.prolific.co/submissions/complete?cc=3F4ECC3D	y
+4	experiment2	34	70		80	10	10.6666666667	1.2133333333	16.14	Agree or disagree (run4-experiment2-batch34-70-70)	Agree or disagree (run4-experiment2-batch34-70-70)	yes						https://app.prolific.co/submissions/complete?cc=44E7C615	y
+4	experiment2	35	70		72	10	9.6	1.0919999999999999	14.54	Agree or disagree (run4-experiment2-batch35-70-70)	Agree or disagree (run4-experiment2-batch35-70-70)	yes						https://app.prolific.co/submissions/complete?cc=10DE510D	y
