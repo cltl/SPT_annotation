@@ -2,6 +2,28 @@
 
 This repository contains code to create input for an annotation task. In this task, property-concept pairs should be annotated with semantic relations. The property-concept pairs were collected from various resources (https://github.com/cltl/semantic_property_dataset).
 
+The motivation of this data set is described in this paper:
+
+@inproceedings{sommerauer-2020-why,
+  title={Why is penguin more similar to polar bear than to sea gull? Analyzing conceptual knowledge in distributional models},
+  author={Sommerauer, Pia},
+  booktitle={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics: Student Research Workshop},
+  year={in press}}
+
+The collection of property-concept pairs to be annotated is outlined in this paper:
+
+@inproceedings{sommerauer-etal-2019-towards,
+	Address = {Wroclaw, Poland},
+	Author = {Sommerauer, Pia and Fokkens, Antske and Vossen, Piek},
+	Booktitle = {Proceedings of the 10th Global Wordnet Conference},
+	Pages = {85--95},
+	Title = {Towards Interpretable, Data-derived Distributional Semantic Representations for Reasoning: A Dataset of Properties and Concepts},
+	Url = {https://clarin-pl.eu/dspace/handle/11321/718},
+	Year = {2019},
+	Bdsk-Url-1 = {https://clarin-pl.eu/dspace/handle/11321/718}}
+
+
+Please use these references if you are using this repository in your research.
 
 ## Annotation task
 
@@ -50,13 +72,13 @@ Replace `[prolific completion-url]` with the completion url you received from Pr
 * Publish
 
 
-To download and analyze the results, please refer to: https://github.com/PiaSommerauer/SPT_crowd_data_analysis.
+The link to the annotated dataset will be made available here.
 
 
 # Modification of examples or description templates
 
-To modify examples, adapt the existing examples in `examples/[relation]-pairs.csv`. 
+To modify examples, adapt the existing examples in `examples/[relation]-pairs.csv`.
 When you're done, run:
 `cd scripts`
-`python add_properties_to_info.py` 
-Then add the information (property-category, etc) manually in the file `data/property_info.csv` 
+`python add_properties_to_info.py`
+Then add the information (property-category, etc) manually in the file `data/property_info.csv`
