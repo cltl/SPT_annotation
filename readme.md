@@ -35,7 +35,7 @@ Example of a single instance in the annotation task
 
 We run the task using the Lingoturk framework (https://github.com/FlorianPusse/Lingoturk) and distribute it via the platform Prolific (https://www.prolific.co/).
 
-You can try out the task using [a small demo set](crowdannotation.cltl.nl/renderProlific?expId=367&partId=367&redirectUrl=)
+You can try out the task using [a small demo set](https://crowdannotation.cltl.nl/renderProlific?expId=367&partId=367&redirectUrl=).
 
 
 ## Code
