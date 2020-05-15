@@ -35,6 +35,9 @@ Example of a single instance in the annotation task
 
 We run the task using the Lingoturk framework (https://github.com/FlorianPusse/Lingoturk) and distribute it via the platform Prolific (https://www.prolific.co/).
 
+You can try out the task using [a small demo set](crowdannotation.cltl.nl/renderProlific?expId=367&partId=367&redirectUrl=)
+
+
 ## Code
 
 (1) Create all questions of a run of your experiment. Each question will receive a unique identifier. Do not change them anymore.
@@ -61,9 +64,9 @@ Replace `[run number]` with the experiment run. Currently, I created run3. The r
 (2) Create batches of questions which have not been annotated yet as you go.
 
 `cd scripts/`
-`python create_batch.py [prolific completion-url] [test/batch]`
+`python create_batch.py [run] [prolific completion-url] [n_participants]`
 
-Replace `[prolific completion-url]` with the completion url you received from Prolific when setting up the task on the platform. Replace `[test/batch]` with either 'test' (for testing) or 'batch' (for creating a batch).
+Replace `[prolific completion-url]` with the completion url you received from Prolific when setting up the task on the platform. Replace `[n_participants]` with either the number of participants (used to calculate a suggested reward) or'test' (for testing).
 
 (3) Launch the task:
 

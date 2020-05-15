@@ -1,3 +1,3 @@
-In this task, you will be asked whether you agree or disagree with statements. The statements involve things and their attributes (e.g. colors, shapes, activities they engage in, etc). We have included examples to help you make a decision. With participating in this task, you help researchers to make AI models more transparent and detect and remove bias from them.
+In this task, you will be asked whether you agree or disagree with statements. The statements involve things and their attributes (e.g. colors, shapes, activities they engage in, etc). We have included examples to help you make a decision. By participating in this task, you help researchers to make AI models more transparent and detect and remove bias from them.
 
-This task is only being shown to selected participants. You have delivered high quality work in previous studies and have therefore been selected.
+This task is only being shown to selected participants. You have delivered high-quality work in previous studies and have therefore been selected.
