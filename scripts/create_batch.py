@@ -5,28 +5,34 @@ from utils import read_group
 from random import shuffle, choice
 import os
 import sys
+import glob
 
 def read_input(run, experiment_name):
     all_input_dicts = []
-    dir_path = f'../prolific_input/run{run}-group_{experiment_name}/'
-    header_path = f'{dir_path}header.txt'
+    input_dicts_batch = []
+    f_paths_all = glob.glob(f'../prolific_input/run*-group_*/*.csv')
+    f_paths_run_name = glob.glob(f'../prolific_input/run{run}-group_{experiment_name}/*.csv')
+    header_path = f'../prolific_input/run{run}-group_{experiment_name}/header.txt'
     batch_numbers = []
-
+    # Get info current batch
     if os.path.isfile(header_path):
         with open(header_path) as infile:
             header = infile.read().split(',')
-
-        filepaths = os.listdir(dir_path)
-        for f in filepaths:
-            full_path = f'{dir_path}{f}'
-            input_dicts = read_csv(full_path, header = header)
+        for f in f_paths_run_name:
+            input_dicts = read_csv(f, header = header)
+            input_dicts_batch.extend(input_dicts)
+            if 'TEST' not in f:
+                f_name = f.split('/')[-1]
+                batch_n = int(f_name.split('-')[2].split('.')[0][len('batch'):])
+                ##../prolific_input/run3-group_experiment1/qu70-s_qu70-batch11.csv
+                batch_numbers.append(batch_n)
+        # get all input dicts:
+        for f in f_paths_all:
+            run = f.replace('../prolific_input/', '').split('-')[0]
+            #../prolific_input/run3-group_experiment1/qu70-s_qu70-batch11.csv
+            input_dicts = read_csv(f, header = header)
             all_input_dicts.extend(input_dicts)
-            # # qu70-s_qu70-batch18.csv
-            if f != 'header.txt':
-                if 'TEST' not in f:
-                    batch_n = int(f.split('-')[2].split('.')[0][len('batch'):])
-                    batch_numbers.append(batch_n)
-    return all_input_dicts, batch_numbers
+    return all_input_dicts, input_dicts_batch, batch_numbers
 
 
 def collect_not_annotated(input_dicts, question_dicts):
@@ -246,15 +252,20 @@ def update_log(new_log_dict):
 
 def create_new_batch(run, experiment_name, url, n_participants, n_qu=70, test=False):
     exp_dict = dict()
-    input_dicts, batch_numbers = read_input(run, experiment_name)
+    all_input_dicts, input_dicts_batch, batch_numbers = read_input(run, experiment_name)
+    print(batch_numbers)
     question_path = f'../questions/run{run}-all-restricted_True.csv'
     question_dicts = read_csv(question_path)
     selected_properties = read_group(experiment_name)
     test_check_questions = get_check_and_test()
 
-    questions_to_annotate, invalid_annotations = get_available_questions(input_dicts,\
+    print('available for batch:')
+    questions_to_annotate_batch, invalid_annotations = get_available_questions(input_dicts_batch,\
                                                                         question_dicts)
-    questions_in_selection = [d for d in questions_to_annotate \
+    print('availabel in total:')
+    questions_to_annotate_total, invalid_annotations = get_available_questions(all_input_dicts,\
+                                                                        question_dicts)
+    questions_in_selection = [d for d in questions_to_annotate_batch \
                               if d['property'] in selected_properties]
     questions_in_selection_total = [d for d in question_dicts \
                               if d['property'] in selected_properties]
@@ -262,7 +273,7 @@ def create_new_batch(run, experiment_name, url, n_participants, n_qu=70, test=Fa
     ### Get counts ###
     # Total dataset
     n_total = len(question_dicts)
-    n_not_annotated = len(questions_to_annotate)
+    n_not_annotated = len(questions_to_annotate_total)
     n_annotated = n_total - n_not_annotated
     percent_total = round(n_annotated/n_total, 3) * 100
     ###
@@ -291,7 +302,7 @@ def create_new_batch(run, experiment_name, url, n_participants, n_qu=70, test=Fa
     # Add tests and checks (one randomly picked one each)
     new_batch.extend(test_check_questions)
     # Test if there are not duplicates
-    test_duplicates(input_dicts, new_batch, invalid_annotations)
+    test_duplicates(input_dicts_batch, new_batch, invalid_annotations)
     # Write batch to file
     batch_path = batch_to_file(new_batch, url, experiment_name, run, n_qu, current_batch_n)
 

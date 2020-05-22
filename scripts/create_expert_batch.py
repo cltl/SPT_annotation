@@ -37,7 +37,7 @@ def main():
     batch_n = 1
     current_batch_n = batch_n
     batch = inspection_questions
-    url = 'test'
+    url = 'https://piasommerauer.github.io/annotation'
     task_name =  f'Agree or disagree (run{run}-{experiment_name}-batch{current_batch_n}-{n_qu}-{n_qu})'
     batch_to_file(batch, url, experiment_name, run, n_qu, batch_n)
     print(task_name)
