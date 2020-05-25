@@ -21,7 +21,7 @@ level	question	relation	perceptual	perceptual_scale	complex	complex_scale	parts	
 2	You can find (a/an) [Y] which is [X]. (A/an) [Y] is usually either [X], a bit more or less [X] or the opposite of [X].	variability_open	0	1	0	1	0	0	0
 2	You can find (a/an) [Y] which has (a/an) [X].  (A/an) [Y] usually either have an [X] or no [X] but this does not distinguish a certain type of [Y] from others. 	variability_open	0	0	0	0	1	0	0
 3	I think (a/an) [Y] can be [X], but this is rare or uncommon.	rare	1	1	1	1	0	0	0
-3	I think (a/an) [Y] can [Lsg] [X], but this is rare or uncommon.	rare	0	0	0	0	1	1	0
+3	I think (a/an) [Y] can [L] (a/an) [X], but this is rare or uncommon.	rare	0	0	0	0	1	1	0
 3	I think there is a [Y]  which can [X]/be used for [Xing], but this is rare or uncommon.	rare	0	0	0	0	0	0	1
 3	Usually, (a/an) [Y] is not [X], but there could be a highly unusual situation in which (a/an) [Y] is [X].	unusual	1	1	1	1	0	0	0
 3	Usually, (a/an) [Y] [Lneg] [X], but there could be a highly unusual situation in which (a/an) [Y] [L] [X].	unusual	0	0	0	0	1	1	0
