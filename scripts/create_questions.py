@@ -49,9 +49,11 @@ class Pairs:
                 for rel in relations:
                     coll = d['collection']
                     prop = d['property']
-                    if prop.startswith('made_of_'):
+                    if prop.startswith('made_of'):
                         coll = 'parts_material'
-                        #print(prop, coll)
+                        prop = prop.lstrip('made_of_')
+                        print(coll, prop)
+
                     scale = self.prop_info[prop][0]['scale']
                     if scale == 'T':
                         coll = coll+'_scale'
@@ -60,6 +62,8 @@ class Pairs:
                         q_d = dict()
                         q_d.update(d)
                         qu_temp = self.question_templates[coll_rel]
+                        #print(prop)
+                        #print(self.prop_info[prop])
                         cat = self.prop_info[prop][0]['category']
                         q_d['quid']  = uuid.uuid4()
                         q_d['relation'] = rel

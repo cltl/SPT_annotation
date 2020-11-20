@@ -106,6 +106,10 @@ def verb_agreement(prop):
         prop_ing = 'swimming'
     elif prop == 'breathe':
         prop_ing = 'breathing'
+    elif prop == 'cut':
+        prop_ing = 'cutting'
+    elif prop == 'wrap':
+        prop_ing = 'wrapping'
     return prop_s, prop_ing
 
 def create_question(prop, concept, question_temp, category):
@@ -115,24 +119,6 @@ def create_question(prop, concept, question_temp, category):
     concept_cap = capitalize(concept)
     #category = prop_info[prop][0]['category']
     prop = prop.strip()
-    if prop.startswith('made_of_'):
-        link_sg = 'is'
-        link_inf = 'be'
-        link = 'are'
-        link_ing = 'being'
-        clink_ing = 'Being'
-        #part = 'materials'
-        lneg = 'is not'
-        neg = 'not'
-    else:
-        link_sg = 'has'
-        link_inf = 'have'
-        link = 'have'
-        link_ing = 'having'
-        clink_ing = 'Having'
-        part = 'parts or components'
-        lneg = 'does not have'
-        neg = 'no'
 
 
     replacements = [
@@ -142,15 +128,7 @@ def create_question(prop, concept, question_temp, category):
                     ('[Xing]', prop_ing),
                     ('[Y]', concept),
                     ('[CY]', concept_cap),
-                    ('[L]', link),
-                    ('[Linf]', link_inf),
-                    ('[Lsg]', link_sg),
-                    ('[Ling]', link_ing),
-                    ('[Lneg]', lneg),
-                    ('[CLing]', clink_ing),
                     ('[category]', category),
-                    ('[link]', link),
-                    ('[neg]', neg)
                     ]
 
     for char, replace_form in replacements:
@@ -182,6 +160,8 @@ def get_example_single(examples, question_temp, prop_info_dict):
     for l in labels:
         prop = rand_example[f'prop_{l}']
         concept = rand_example[f'concept_{l}']
+        #print(prop)
+        #print(prop_info_dict[prop])
         category = prop_info_dict[prop][0]['category']
         example_qu = create_question(prop, concept, question_temp, category)
         rand_example[f'example_{l}'] = example_qu
@@ -199,6 +179,8 @@ def get_example_creative(examples, question_temp, prop_info_dict):
         for l in labels:
             prop = ex[f'prop_{l}']
             concept = ex[f'concept_{l}']
+            #print(prop)
+            #print(prop_info_dict[prop])
             category = prop_info_dict[prop][0]['category']
             example_qu = create_question(prop, concept, question_temp, category)
             creative_ex_d[f'example_{l}'].append(example_qu)
