@@ -5,9 +5,9 @@ perceptual	frozen	flame	light	book
 perceptual_scale	dry	water	white	rose
 perceptual_scale	solid	steam	orange	flame
 perceptual_scale	frozen	flame	light	book
-parts_material	made_of_cotton	mirror	made_of_plastic	dress
-parts_material	made_of_plastic	magnet	made_of_metal	paper clip
-parts_material	made_of_wood	light_bulb	made_of_wood	spoon
+parts_material	cotton	mirror	plastic	dress
+parts_material	plastic	magnet	metal	paper clip
+parts_material	wood	light_bulb	wood	spoon
 parts	fin	cow	fin	dolphin
 parts	beak	rabbit	ink	pen
 parts	lungs	goldfish	pockets	dress

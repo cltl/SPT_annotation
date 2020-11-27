@@ -2,9 +2,9 @@ collection	prop_pos	concept_pos	prop_neg	concept_neg
 perceptual 	white	snow	grey	water
 perceptual 	small	mouse	small	dog
 perceptual 	colorful	rainbow	white	table
-parts_material	made_of_metal	chain	made_of_plastic	pen
-parts_material	made_of_wool	sweater	made_of_wool	T-shirt
-parts_material	made_of_grain	bread	made_of_grain	cake
+parts_material	metal	chain	plastic	pen
+parts_material	wool	sweater	wool	T-shirt
+parts_material	flour	bread	lentils	pasta
 parts	sail	sailing_boat	sail	surf_board
 parts	mane	lion	sattle	unicycle
 parts 	lid	pot	teeth	cat

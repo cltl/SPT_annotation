@@ -20,7 +20,7 @@ The collection of property-concept pairs to be annotated is outlined in this pap
 	Title = {Towards Interpretable, Data-derived Distributional Semantic Representations for Reasoning: A Dataset of Properties and Concepts},
 	Url = {https://clarin-pl.eu/dspace/handle/11321/718},
 	Year = {2019},
-	Bdsk-Url-1 = {https://clarin-pl.eu/dspace/handle/11321/718}}
+	Bdsk-Url-1 = {https://clarin-pl.eu/dspace/handle/11321/718 }}
 
 
 Please use these references if you are using this repository in your research.
@@ -54,12 +54,35 @@ Each question consists of:
 * pos and neg example concept
 * source of the property-concept pair
 
+
+Exclude concepts and update dataset:
+
+* Follow instructions in this notebook: scripts/Filter pairs
+* Replace concepts with concepts from the full candidate set by running:
+
+ `cd scripts/`
+ 
+ `python replace_excluded_conepts.py [property] [collection]`
+ 
+ 
+* Then update the dataset by running: 
+
+`python update_dataset.py`
+
+The resampled set is stored in `data/resampled/`
+
+**Important note**: From now on, only data in `data/resampled/` will be used for question generation. (update November 27, 2020)
+
 To create the questions, run:
 
 `cd scripts/`
+
 `python create_questions.py [run number]`
 
 Replace `[run number]` with the experiment run. Currently, I created run3. The run number determines which descriptions of relations will be used (stored in `templates/`). The examples are taken from `examples/`.
+
+Update November 27, 2020: As of now, questions will only be created based on updated data (stored in data/resampled)
+
 
 (2) Create batches of questions which have not been annotated yet as you go.
 

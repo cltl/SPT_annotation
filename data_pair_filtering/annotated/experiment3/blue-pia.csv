@@ -1,0 +1,144 @@
+property,lemma,decision,
+blue,thought,include,
+blue,pond,include,
+blue,problem,include,
+blue,daisy,include,
+blue,dandelion,include,
+blue,strawberry,include,
+blue,frog,include,
+blue,cabbage,include,
+blue,miner,exclude,"blue person? clothes, skin, bruises?"
+blue,sandpaper,include,
+blue,jade,include,
+blue,onion,include,
+blue,zebra,include,
+blue,peach,include,
+blue,lime,include,
+blue,avocado,include,
+blue,night,include,
+blue,moss,include,
+blue,orchid,include,
+blue,clothing,include,
+blue,elm,include,
+blue,broccoli,include,
+blue,cherry,include,
+blue,coal,include,
+blue,crypt,include,
+blue,pyramid,include,
+blue,rooster,include,
+blue,blackboard,include,
+blue,truffle,include,
+blue,dog,include,
+blue,football,include,
+blue,nectarine,include,
+blue,fox,include,
+blue,beetle,include,
+blue,cheetah,include,
+blue,barn,include,
+blue,giraffe,include,
+blue,beer,include,
+blue,herring,include,
+blue,car,include,
+blue,cockroach,include,
+blue,jaguar,include,
+blue,goldfish,include,
+blue,locust,include,
+blue,ambulance,exclude,very very location-dependent
+blue,crow,include,
+blue,leopard,include,
+blue,fir,include,
+blue,flower,include,
+blue,buttercup,include,
+blue,olive,include,
+blue,bottle,include,
+blue,currant,include,
+blue,beet,include,
+blue,raisin,include,
+blue,gorilla,include,
+blue,tarantula,include,
+blue,cricket,include,
+blue,marigold,include,
+blue,balloon,include,
+blue,glass,include,
+blue,paint,include,
+blue,bellflower,include,
+blue,blueberry,include,
+blue,sky,include,
+blue,feeling,include,
+blue,world,include,
+blue,eye,include,
+blue,lark,include,
+blue,iceberg,include,
+blue,diamond,include,
+blue,budgie,include,
+blue,dress,include,
+blue,chameleon,include,
+blue,sapphire,include,
+blue,egg,include,
+blue,water,include,
+blue,umbrella,include,
+blue,violet,include,
+blue,ring,include,
+blue,peacock,include,
+blue,lagoon,include,
+blue,whale,exclude,brid partly blue
+blue,kingfisher,include,
+blue,dolphin,include,
+blue,jean,exclude,weird spelling variant of jeans?
+blue,avocet,exclude,
+blue,snake,include,
+blue,pleuronectidae,exclude,technical term
+blue,feather,include,
+blue,yellowthroat,exclude,
+blue,shark,include,
+blue,flamingo,include,
+blue,anhinga,exclude,bird
+blue,trogon,exclude,bird
+blue,beak,exclude,confusing
+blue,gorgonian,exclude,hard to look up
+blue,quail,include,
+blue,lizard,include,
+blue,turtle,include,
+blue,nuthatch,exclude,bird
+blue,bluebird,exclude,
+blue,plumage,include,
+blue,fringillidae,exclude,
+blue,blossom,include,
+blue,parrot,include,
+blue,bird,include,
+blue,grackle,exclude,bird genus
+blue,crab,include,
+blue,wagtail,exclude,bird
+blue,platanthera,exclude,technical term
+blue,monkey,include,
+blue,thornbill,exclude,
+blue,pipefish,exclude,not well known
+blue,paridae,exclude,partly blue - confusing?
+blue,mentzelia,exclude,plant genus
+blue,frogmouth,exclude,confusing
+blue,lorikeet,exclude,bird
+blue,scaup,include,
+blue,bowerbird,exclude,
+blue,fish,include,
+blue,pratincole,exclude,bird not well known
+blue,spathe,exclude,confusing
+blue,toucanet,exclude,bird and weird spelling variant
+blue,bushbaby,include,
+blue,tropicbird,exclude,unorthodox spelling
+blue,frogfish,include,
+blue,turaco,exclude,bird family
+blue,grosbeak,exclude,bird family
+blue,dogwood,include,
+blue,coucal,exclude,bird family
+blue,sapsucker,exclude,bird 
+blue,dogbane,include,
+blue,snailfish,exclude,fish family
+blue,scorpionfish,exclude,fish family
+blue,charadrius,exclude,technical term for bird genus
+blue,seedpod,exclude,confusing
+blue,merganser,exclude,duck family
+blue,crossbill,include,bird - not well known
+blue,chickadee,exclude,bird - not well known
+blue,cardamine,exclude,plant genus
+blue,parrotfish,include,
+blue,currawong,exclude,bird not well known

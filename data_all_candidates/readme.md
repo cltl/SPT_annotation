@@ -1,0 +1,1 @@
+This directory contains the full dataset extracted from resources and the GoogleNews Word2Vec model. The code and data are in my private Bitbucket repository (feature_data). The code only is on Github (semantic_properties). 

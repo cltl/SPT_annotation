@@ -6,11 +6,11 @@ perceptual_scale	sharp	knife	solid	substance
 perceptual_scale	salty	soup	salty	strawberry
 perceptual_scale	bitter	chocolate	soft	diamond
 parts	pockets	dress	blade	knife
-parts	bow	dress	emergency lights	car
+parts	bow	dress	emergency vehicle light	car
 parts	curtain	window	page	book
-parts_material	made_of_roses	bouquet	made_of_metal	knife
-parts_material	made_of_cotton	bag	made_of_metal	razor_blade
-parts_material	made_of_daysies	bouquet	made_of_paper	book
+parts_material	roses	bouquet	metal	knife
+parts_material	cotton	bag	metal	razor_blade
+parts_material	daisies	bouquet	paper	book
 complex	white	t-shirt	green	pepper
 complex	white	dress	green	apple
 complex	purple	flower	orange	carrot

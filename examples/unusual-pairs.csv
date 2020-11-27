@@ -5,9 +5,9 @@ perceptual	blue	pony	brown	beer
 perceptual_scale	melting	clock	melting	ice cream
 perceptual_scale	furry	table	furry	cat
 perceptual_scale	blue	pony	sharp	razor
-parts_material	made_of_metal	dress	made_of_metal	nail
-parts_material	made_of_paper	knife	made_of_plastic	magnet
-parts_material	made_of_paper	skirt	made_of_paper	cup
+parts_material	metal	dress	metal	nail
+parts_material	paper	knife	plastic	magnet
+parts_material	paper	skirt	paper	cup
 parts	wings	car	wings	bird
 parts	face	orange	tail	dog
 parts	face	apple	face	teddy_bear

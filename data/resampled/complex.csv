@@ -1,0 +1,181 @@
+property,lemma,label,certainty,sources_str
+used_in_cooking,sparrow,neg,certain,manually_included
+used_in_cooking,canary,neg,certain,manually_included
+used_in_cooking,violin,neg,certain,manually_included
+used_in_cooking,hammer,neg,not_certain,wn_hypernym
+used_in_cooking,shovel,neg,not_certain,wn_hypernym
+used_in_cooking,plier,neg,not_certain,wn_hypernym
+used_in_cooking,blade,neg,not_certain,wn_hypernym
+used_in_cooking,trowel,neg,not_certain,wn_hypernym
+used_in_cooking,rake,neg,not_certain,wn_hypernym
+used_in_cooking,chainsaw,neg,not_certain,wn_hypernym
+used_in_cooking,ripsaw,neg,not_certain,wn_hypernym
+used_in_cooking,auger,neg,not_certain,wn_hypernym
+used_in_cooking,pestle,neg,not_certain,wn_hypernym
+used_in_cooking,screwdriver,neg,not_certain,wn_hypernym
+used_in_cooking,stamper,neg,not_certain,wn_hypernym
+used_in_cooking,drill,neg,not_certain,wn_hypernym
+used_in_cooking,opener,neg,not_certain,wn_hypernym
+used_in_cooking,jigsaw,neg,not_certain,wn_hypernym
+used_in_cooking,pincer,neg,not_certain,wn_hypernym
+used_in_cooking,hacksaw,neg,not_certain,wn_hypernym
+used_in_cooking,toothpick,neg,not_certain,wn_hypernym
+used_in_cooking,spade,neg,not_certain,wn_hypernym
+used_in_cooking,pounder,neg,not_certain,wn_hypernym
+used_in_cooking,hack,neg,not_certain,wn_hypernym
+used_in_cooking,gutter,neg,not_certain,wn_hypernym
+used_in_cooking,scraper,neg,not_certain,wn_hypernym
+used_in_cooking,gavel,neg,not_certain,wn_hypernym
+used_in_cooking,file,neg,not_certain,wn_hypernym
+used_in_cooking,pallet,neg,not_certain,wn_hypernym
+used_in_cooking,planer,neg,not_certain,wn_hypernym
+used_in_cooking,rasp,neg,not_certain,wn_hypernym
+used_in_cooking,comb,neg,not_certain,wn_hypernym
+used_in_cooking,mallet,neg,not_certain,wn_hypernym
+used_in_cooking,scoop,neg,not_certain,wn_hypernym
+used_in_cooking,clincher,neg,not_certain,wn_hypernym
+used_in_cooking,burr,neg,not_certain,wn_hypernym
+used_in_cooking,borer,neg,not_certain,wn_hypernym
+used_in_cooking,reamer,neg,not_certain,wn_hypernym
+used_in_cooking,corkscrew,neg,not_certain,wn_hypernym
+used_in_cooking,stamp,neg,not_certain,wn_hypernym
+used_in_cooking,grappler,neg,not_certain,wn_hypernym
+used_in_cooking,hayfork,neg,not_certain,wn_hypernym
+used_in_cooking,mower,neg,not_certain,wn_hypernym
+used_in_cooking,bevel,neg,not_certain,wn_hypernym
+used_in_cooking,spanner,neg,not_certain,wn_hypernym
+used_in_cooking,beetle,neg,not_certain,wn_hypernym
+used_in_cooking,polisher,neg,not_certain,wn_hypernym
+used_in_cooking,pitchfork,neg,not_certain,wn_hypernym
+used_in_cooking,gang,neg,not_certain,wn_hypernym
+used_in_cooking,stylus,neg,not_certain,wn_hypernym
+used_in_cooking,router,neg,not_certain,wn_hypernym
+used_in_cooking,chicken,pos,certain,cslb_crowd_pos manually_included
+used_in_cooking,shrimp,pos,certain,manually_included
+used_in_cooking,bass,pos,certain,manually_included
+used_in_cooking,chisel,pos,not_certain,wn_hypernym
+used_in_cooking,lancet,pos,not_certain,wn_hypernym
+used_in_cooking,broccoli,pos,not_certain,cslb
+used_in_cooking,cauliflower,pos,not_certain,cslb
+used_in_cooking,lime,pos,not_certain,cslb
+used_in_cooking,pickaxe,pos,not_certain,wn_hypernym
+used_in_cooking,pimento,pos,certain,cslb_crowd_pos
+used_in_cooking,carrot,neg/pos/pos,uncertain,wikipedia_sgns_model cslb wikipedia_sgns_model cslb
+used_in_cooking,microwave,pos,not_certain,cslb
+used_in_cooking,shear,pos,not_certain,wn_hypernym wn_hypernym
+used_in_cooking,blender,pos,not_certain,cslb
+used_in_cooking,mussel,pos,not_certain,cslb
+used_in_cooking,scalpel,pos,not_certain,wn_hypernym
+used_in_cooking,cleaver,pos,not_certain,wn_hypernym
+used_in_cooking,fork,pos,not_certain,wn_hypernym
+used_in_cooking,sickle,pos,not_certain,wn_hypernym
+used_in_cooking,hatchet,pos,not_certain,wn_hypernym
+used_in_cooking,oven,pos,not_certain,cslb
+used_in_cooking,corn,pos,not_certain,cslb
+used_in_cooking,mattock,pos,not_certain,wn_hypernym
+used_in_cooking,mayonnaise,pos,certain,cslb_crowd_pos
+used_in_cooking,snip,pos,not_certain,wn_hypernym
+used_in_cooking,clipper,pos,not_certain,wn_hypernym
+used_in_cooking,butter,pos,not_certain,cslb
+used_in_cooking,turnip,pos,not_certain,cslb
+used_in_cooking,plane,pos,not_certain,wn_hypernym
+used_in_cooking,bacon,pos,not_certain,cslb
+used_in_cooking,coconut,pos,not_certain,cslb
+used_in_cooking,ax,pos,not_certain,wn_hypernym
+used_in_cooking,cutter,pos,not_certain,wn_hypernym
+used_in_cooking,pea,pos,certain,cslb_crowd_pos
+used_in_cooking,aubergine,pos,not_certain,cslb
+used_in_cooking,tablespoon,pos,not_certain,wn_hypernym
+used_in_cooking,spatula,pos,not_certain,cslb wn_hypernym
+used_in_cooking,shaver,pos,not_certain,wn_hypernym
+used_in_cooking,asparagus,pos,certain,cslb_crowd_pos
+used_in_cooking,cutlery,pos,not_certain,wn_hypernym
+used_in_cooking,switchblade,pos,not_certain,wn_hypernym
+used_in_cooking,stove,pos,not_certain,cslb
+used_in_cooking,tomato,pos,not_certain,cslb
+used_in_cooking,taco,pos,certain,cslb_crowd_pos
+used_in_cooking,slicer,pos,not_certain,wn_hypernym
+used_in_cooking,artichoke,pos,not_certain,cslb
+used_in_cooking,axe,pos,not_certain,wn_hypernym
+used_in_cooking,potato,neg/pos/pos,uncertain,wikipedia_sgns_model cslb
+used_in_cooking,lobster,pos,not_certain,cslb
+used_in_cooking,adz,pos,not_certain,wn_hypernym
+used_in_cooking,rice,pos,not_certain,cslb
+used_in_cooking,prawn,pos,not_certain,cslb
+used_in_cooking,apron,pos,not_certain,cslb
+used_in_cooking,lance,pos,not_certain,wn_hypernym
+used_in_cooking,jackknife,pos,not_certain,wn_hypernym
+used_in_cooking,knife,pos,not_certain,cslb wn_hypernym
+used_in_cooking,mushroom,pos,not_certain,cslb
+used_in_cooking,penknife,pos,not_certain,wn_hypernym
+used_in_cooking,cutlet,neg/pos,not_certain,wikipedia_sgns_model wikipedia_sgns_model
+used_in_cooking,cheese,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,flannel,pos/neg,not_certain,cslb
+used_in_cooking,gravy,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,onion,neg/pos/pos,uncertain,cslb wikipedia_sgns_model
+used_in_cooking,tortilla,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,beef,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,marinade,neg/pos,not_certain,wikipedia_sgns_model wikipedia_sgns_model
+used_in_cooking,sauce,neg/pos,not_certain,wikipedia_sgns_model wikipedia_sgns_model
+used_in_cooking,radish,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,cake,neg/pos,not_certain,wikipedia_sgns_model wikipedia_sgns_model
+used_in_cooking,steak,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,chutney,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,vegetable,neg/pos,not_certain,wikipedia_sgns_model wikipedia_sgns_model
+used_in_cooking,pigweed,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,stew,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,vinegar,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,pasta,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,cream,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,soup,neg/pos,not_certain,wikipedia_sgns_model wikipedia_sgns_model
+used_in_cooking,confit,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,dough,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,casserole,neg/pos,not_certain,wikipedia_sgns_model wikipedia_sgns_model
+used_in_cooking,pastry,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,condiment,neg/pos,not_certain,wikipedia_sgns_model wikipedia_sgns_model
+used_in_cooking,bread,neg/pos,not_certain,wikipedia_sgns_model wikipedia_sgns_model
+used_in_cooking,lentil,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,chorizo,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,sausage,neg/pos,not_certain,wikipedia_sgns_model wikipedia_sgns_model
+used_in_cooking,oregano,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,galangal,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,mustard,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,flatbread,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,cucumber,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,acaridae,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,almond,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,breadcrumb,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,lettuce,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,meat,neg/pos,not_certain,wikipedia_sgns_model wikipedia_sgns_model
+used_in_cooking,soursop,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,vinaigrette,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,sapodilla,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,slaw,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,chickpea,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,pepperoni,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,cornmeal,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,celery,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,noodle,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,spiciness,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,plough,neg,not_certain,wn_hypernym
+used_in_cooking,spoon,pos,not_certain,wn_hypernym
+used_in_cooking,croquette,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,spreader,neg,not_certain,wn_hypernym
+used_in_cooking,spinach,pos,certain,cslb_crowd_pos cslb
+used_in_cooking,scallop,pos,not_certain,cslb
+used_in_cooking,rammer,neg,not_certain,wn_hypernym
+used_in_cooking,grasshopper,neg,certain,cslb_crowd_neg
+used_in_cooking,grater,pos,certain,cslb_crowd_pos
+used_in_cooking,garlic,pos,not_certain,cslb
+used_in_cooking,bean,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,flour,pos,not_certain,cslb
+used_in_cooking,rhubarb,pos,not_certain,cslb
+used_in_cooking,parer,pos,not_certain,wn_hypernym
+used_in_cooking,scythe,pos,not_certain,wn_hypernym
+used_in_cooking,ham,pos,not_certain,cslb
+used_in_cooking,toaster,pos,not_certain,cslb
+used_in_cooking,cabbage,pos,not_certain,cslb
+used_in_cooking,pineapple,neg/pos,not_certain,wikipedia_sgns_model
+used_in_cooking,straightedge,neg,not_certain,wn_hypernym
+used_in_cooking,bur,neg,not_certain,wn_hypernym
+used_in_cooking,hoe,neg,not_certain,wn_hypernym

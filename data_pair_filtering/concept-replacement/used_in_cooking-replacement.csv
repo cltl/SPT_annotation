@@ -1,0 +1,23 @@
+used_in_cooking	spiciness	neg/pos	not_certain	wikipedia_sgns_model
+used_in_cooking	plough	neg	not_certain	wn_hypernym
+used_in_cooking	spoon	pos	not_certain	wn_hypernym
+used_in_cooking	croquette	neg/pos	not_certain	wikipedia_sgns_model
+used_in_cooking	spreader	neg	not_certain	wn_hypernym
+used_in_cooking	spinach	pos	certain	cslb_crowd_pos cslb
+used_in_cooking	scallop	pos	not_certain	cslb
+used_in_cooking	rammer	neg	not_certain	wn_hypernym
+used_in_cooking	grasshopper	neg	certain	cslb_crowd_neg
+used_in_cooking	grater	pos	certain	cslb_crowd_pos
+used_in_cooking	garlic	pos	not_certain	cslb
+used_in_cooking	bean	neg/pos	not_certain	wikipedia_sgns_model
+used_in_cooking	flour	pos	not_certain	cslb
+used_in_cooking	rhubarb	pos	not_certain	cslb
+used_in_cooking	parer	pos	not_certain	wn_hypernym
+used_in_cooking	scythe	pos	not_certain	wn_hypernym
+used_in_cooking	ham	pos	not_certain	cslb
+used_in_cooking	toaster	pos	not_certain	cslb
+used_in_cooking	cabbage	pos	not_certain	cslb
+used_in_cooking	pineapple	neg/pos	not_certain	wikipedia_sgns_model
+used_in_cooking	straightedge	neg	not_certain	wn_hypernym
+used_in_cooking	bur	neg	not_certain	wn_hypernym
+used_in_cooking	hoe	neg	not_certain	wn_hypernym

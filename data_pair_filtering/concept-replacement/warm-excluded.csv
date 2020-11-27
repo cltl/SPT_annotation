@@ -1,0 +1,11 @@
+warm	argument	neg	certain	manually_included
+warm	fun	neg	not_certain	conceptnet
+warm	moon	neg	not_certain	conceptnet
+warm	pound	pos	not_certain	conceptnet
+warm	wearer	neg/pos	not_certain	wikipedia_sgns_model
+warm	neckline	neg/pos	not_certain	wikipedia_sgns_model
+warm	kerchief	neg/pos	not_certain	wikipedia_sgns_model
+warm	forelock	neg/pos	not_certain	wikipedia_sgns_model
+warm	ankle	neg/pos	not_certain	wikipedia_sgns_model
+warm	breech	neg/pos	not_certain	wikipedia_sgns_model
+warm	pajama	neg/pos	not_certain	wikipedia_sgns_model

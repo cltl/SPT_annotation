@@ -6,9 +6,9 @@ perceptual_scale	sweet	chocoloate_bar	white	dress
 perceptual_scale	sweet	chocoloate_cake	transparent	table
 perceptual_scale	liquid	wine	liquid	bread
 perceptual_scale	alcoholic	merlot	alcoholic	lemonade
-parts_material	made_of_metal	earring	made_of_metal	blanket
-parts_material	made_of_fabric	sock	made_of_gold	fork
-parts_material	made_of_china	plate	made_of_paper	pen
+parts_material	metal	earring	metal	blanket
+parts_material	fabric	sock	gold	fork
+parts_material	china	plate	paper	pen
 parts	mane	pony	ink	pen
 parts	head	bunny	handle	mug
 parts	legs	dog	handle	teddy bear
