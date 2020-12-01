@@ -1,0 +1,64 @@
+
+wiki_frequency
+bin	 original (percent)	 original (absolut)	resampled (percent)	resampled (absolut)
+0	0.79 	142	0.82	147
+
+1	0.21 	37	0.18	33
+
+2	0 	0	0	0
+
+
+conc
+bin	 original (percent)	 original (absolut)	resampled (percent)	resampled (absolut)
+2	0.35 	62	0.37	66
+
+None	0.61 	110	0.61	110
+
+1	0.03 	6	0.02	4
+
+0	0.01 	1	0	0
+
+
+fam
+bin	 original (percent)	 original (absolut)	resampled (percent)	resampled (absolut)
+2	0.32 	57	0.33	59
+
+1	0.07 	12	0.07	12
+
+None	0.6 	108	0.6	108
+
+0	0.01 	2	0.01	1
+
+
+aoa
+bin	 original (percent)	 original (absolut)	resampled (percent)	resampled (absolut)
+None	0.84 	151	0.87	156
+
+0	0.09 	16	0.08	15
+
+1	0.06 	11	0.04	8
+
+2	0.01 	1	0.01	1
+
+
+polysemy
+bin	 original (percent)	 original (absolut)	resampled (percent)	resampled (absolut)
+mon	0.24 	43	0.25	45
+
+None	0.36 	64	0.36	64
+
+poly_metonymy	0.33 	59	0.33	60
+
+homonym	0.07 	13	0.06	11
+
+met	0 	0	0	0
+
+
+cosine_centroid
+bin	 original (percent)	 original (absolut)	resampled (percent)	resampled (absolut)
+0	0.3 	53	0.28	50
+
+1	0.27 	49	0.29	53
+
+2	0.43 	77	0.43	77
+

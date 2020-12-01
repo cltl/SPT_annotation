@@ -157,7 +157,7 @@ def get_polysemy_info(concept_dict):
         poly = 'mon'
     elif polysemy_type == 'homonyms_also_same_pos':
         poly = 'homonym'
-    elif mipvu_met == 'True' or mipvu_met == 'true':
+    elif mipvu_met == 'True':
         poly = 'met'
     # Possibly metonymy if not metaphor and not homonym
     # caveat: the metaphor annotations are not exhaustive
@@ -204,12 +204,8 @@ def get_ranked_bin_imbalances(general_bin_dict,
     bin_diff_tuples = []
     for name in general_bin_dict:
         bin_concept_cnt = Counter()
-        bin_dict = general_bin_dict[name]
-        bins_expected = bin_dict['bins']
-        n_bins = len(bins_expected)
+        n_bins = len(general_bin_dict[name]['bins'])
         n_equal_distribution = n_concepts / n_bins
-        print(name, len(bins_expected))
-        print('expected number of concepts in a single bin:', n_equal_distribution, 'out of', n_concepts)
         for concept in concepts_selected:
             f = set_bin_features[concept][name]
             bin_concept_cnt[f] += 1
@@ -331,7 +327,7 @@ def get_concept_dicts(p, concepts, set_info_dict):
     return concept_dicts
 
 
-def replacements_to_file(p, run, concept_dicts_new, concept_dicts_exclude):
+def replacements_to_file(p, concept_dicts_new, concept_dicts_exclude):
     """
     Write exluded concepts and replacement concepts to file.
     :param p:
@@ -339,7 +335,7 @@ def replacements_to_file(p, run, concept_dicts_new, concept_dicts_exclude):
     :param concept_dicts_exclude:
     :return: None
     """
-    path = f'../data_pair_filtering/concept-replacement/run{run}/'
+    path = '../data_pair_filtering/concept-replacement/'
     if not os.path.isdir(path):
         os.mkdir(path)
     header = concept_dicts_exclude[0].keys()
@@ -357,17 +353,11 @@ def replacements_to_file(p, run, concept_dicts_new, concept_dicts_exclude):
 def main():
     p = sys.argv[1]
     col = sys.argv[2]
-    run = sys.argv[3]
     # make sure we have enough data:
     n_concepts_expected = 180
     # props_collection_dict = {'used_in_cooking': 'complex', 'warm': 'perceptual', 'black': 'perceptual'}
     # col = props_collection_dict[p]
     set_info_dict = get_concepts_set(p, col)
-    # harmonize undecided labels to neg/pos (instead of pos/neg):
-    for concept, d in set_info_dict.items():
-        label = d['label']
-        if label in ['pos/neg', 'neg/pos']:
-            d['label'] = 'neg/pos'
     # load annotations for exclusion:
     concept_dicts_exclude, concept_dicts_include = get_excluded_included_concepts(p)
     # Get selected concepts
@@ -405,9 +395,7 @@ def main():
     print('Concepts included before re-sampling (not excluded + direct equivalents:', n_concepts_include)
     print('Concepts to find:', n_to_replace)
     # add labels to general bin dict so we also check positive and negative candidates
-    general_bin_dict['label'] = {'bins': ['pos', 'neg', 'neg/pos']}
-
-
+    general_bin_dict['label'] = {'bins': ['pos', 'neg', 'pos/neg', 'neg/pos']}
     # determine bin imbalances and resample based on them:
 
     resampled_concepts = resample_missing_concepts(n_to_replace,
@@ -420,6 +408,8 @@ def main():
     new_concepts = set()
     new_concepts.update(direct_replacements)
     new_concepts.update(resampled_concepts)
+
+
 
     # write to file
     concept_dicts_new = get_concept_dicts(p, new_concepts, set_info_dict)

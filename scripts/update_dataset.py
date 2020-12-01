@@ -2,12 +2,12 @@ import glob
 import csv
 import os
 from collections import defaultdict
+import sys
 
-
-def load_replacement_info():
+def load_replacement_info(run):
 
     prop_dict = defaultdict(dict)
-    path = '../data_pair_filtering/concept-replacement/*.csv'
+    path = f'../data_pair_filtering/concept-replacement/run{run}/*.csv'
     header = ['property', 'lemma', 'label', 'certainty', 'sources_str']
     for f in glob.glob(path):
         basename = os.path.basename(f)
@@ -59,10 +59,10 @@ def replace_data(prop_dict_replacements, prop_dict_original):
         data_replaced[collection].extend(keep)
     return data_replaced
 
-def data_to_files(data_replaced):
+def data_to_files(run, data_replaced):
 
     for collection, data in data_replaced.items():
-        path = f'../data/resampled/{collection}.csv'
+        path = f'../data/resampled/run{run}/{collection}.csv'
         header = data[0].keys()
         with open(path, 'w') as outfile:
             writer = csv.DictWriter(outfile, fieldnames = header, delimiter = ',')
@@ -71,10 +71,11 @@ def data_to_files(data_replaced):
                 writer.writerow(d)
 
 def main():
-    prop_dict_replacements = load_replacement_info()
+    run = sys.argv[1]
+    prop_dict_replacements = load_replacement_info(run)
     prop_dict_original = load_original_dataset()
     data_replaced = replace_data(prop_dict_replacements, prop_dict_original)
-    data_to_files(data_replaced)
+    data_to_files(run, data_replaced)
 
 
 

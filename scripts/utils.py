@@ -49,8 +49,11 @@ def read_examples(relations):
     return relation_examples_dict
 
 
-def read_pairs(collection, source = 'resampled'):
-    filepath = f'../data/{source}/{collection}.csv'
+def read_pairs(collection, run, source = 'resampled'):
+    if source == 'resampled':
+        filepath = f'../data/{source}/run{run}/{collection}.csv'
+    else:
+        filepath = f'../data/{source}/{collection}.csv'
     if os.path.isfile(filepath):
         dict_list = read_csv(filepath)
         dict_list_by_prop = sort_by_key(dict_list, ['property'])

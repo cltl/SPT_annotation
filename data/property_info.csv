@@ -3,7 +3,7 @@ swim,movements,F,do
 roll,movements,F,do
 lay_eggs,activities,F,do
 fly,movements,F,do
-warm,temperatures,T,have
+warm,qualities,T,have
 hot,temperatures,T,have
 red,colors,F,have
 square,shapes,F,have

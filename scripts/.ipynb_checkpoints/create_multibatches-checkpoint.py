@@ -366,7 +366,6 @@ def main():
     n_participants_per_batch = int(sys.argv[4])
     n_participants = n_lists * n_participants_per_batch
 
-
     #url = 'test'
     #purpose = 'test'
     if url == 'TEST':
@@ -375,7 +374,8 @@ def main():
     elif url != 'TEST':
         test = False
 
-    create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=20, test=test)
+    #create_new_batch(run, experiment_name, url, n_participants, n_qu=3, test=test)
+    create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=3, test=test)
 
 if __name__ == '__main__':
     main()

@@ -29,7 +29,7 @@ class Pairs:
     def get_data_dicts(self):
         data_dicts = []
         for coll in self.collections:
-            prop_data_dicts = utils.read_pairs(coll)
+            prop_data_dicts = utils.read_pairs(coll, run)
             for prop, dicts in prop_data_dicts.items():
                 for d in dicts:
                     d['concept'] = d['lemma']
@@ -55,7 +55,6 @@ class Pairs:
                     if prop.startswith('made_of'):
                         coll = 'parts_material'
                         prop = prop.lstrip('made_of_')
-                        print(coll, prop)
 
                     scale = self.prop_info[prop][0]['scale']
                     if scale == 'T':
@@ -73,14 +72,18 @@ class Pairs:
                         q_d['question'] = utils.create_question(prop, d['concept'], qu_temp, cat)
                         examples = self.relation_examples_dict[rel][coll]
                         ex_dict = utils.get_example(examples, qu_temp, self.prop_info, rel)
+                        if 'collection' in ex_dict:
+                            ex_dict.pop('collection')
                         q_d.update(ex_dict)
+                        # print(q_d['collection'])
+                        # print('---')
                         questions.append(q_d)
                     # else:
                         # print('not found:,', coll_rel)
         return questions
 
 
-    def to_file(self, overwrite_existing=False):
+    def to_file(self, overwrite_existing=True):
         # questions/run_3-all-restrict_True.csv
         filepath = f'../questions/run{self.run}-all-restricted_{self.restrict}.csv'
         if os.path.isfile(filepath) and overwrite_existing == False:
