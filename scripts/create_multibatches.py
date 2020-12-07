@@ -2,7 +2,7 @@ from utils import read_csv, to_csv
 from utils import sort_by_key
 from utils import read_group
 
-from random import shuffle, choice
+from random import shuffle,choices
 import os
 import sys
 import glob
@@ -101,17 +101,7 @@ def test_for_wrong_questions(questions_for_annotation):
 
 
 
-def get_check_and_test():
-    checks = read_csv('../questions/checks.csv')
-    tests = read_csv('../questions/tests.csv')
 
-    rand_check = choice(checks)
-    rand_test = choice(tests)
-    tests_checks = [rand_check, rand_test]
-    for d in tests_checks:
-        if '' in d:
-            d.pop('')
-    return tests_checks
 
 def get_batch(questions_to_annotate, n_qu = 70):
     batch = []
@@ -149,13 +139,13 @@ def get_batch(questions_to_annotate, n_qu = 70):
     return batch
 
 
-def batch_to_file(batch, url, experiment_name, run, n_qu, batch_n):
+def batch_to_file(batch, url, experiment_name, run, n_qu, n_lists, batch_n):
 
     # header = ['quid', 'question', 'example_pos', 'example_neg']
     header_new = ['quid','listNr', 'description', 'exampleTrue', 'exampleFalse',\
                   'triple', 'completionUrl', 'name']
     dirpath = f'../prolific_input/run{run}-group_{experiment_name}/'
-    batch_name = f'qu{n_qu}-s_qu{n_qu}-batch{batch_n}'
+    batch_name = f'qu{n_qu}-s_qu{n_lists}-batch{batch_n}'
     filepath = f'{dirpath}{batch_name}.csv'
     pl_name = f'Agree or disagree (run{run}-{experiment_name}-batch{batch_n}-{n_qu}-{n_qu})'
 
@@ -258,7 +248,8 @@ def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70
     question_path = f'../questions/run{run}-all-restricted_True.csv'
     question_dicts = read_csv(question_path)
     selected_properties = read_group(experiment_name)
-
+    test_question_path = f'../questions/run{run}-TEST.csv'
+    test_question_dicts = read_csv(test_question_path)
 
     print('available for batch:')
     questions_to_annotate_batch, invalid_annotations = get_available_questions(input_dicts_batch,\
@@ -300,20 +291,34 @@ def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70
 
     full_batch = []
     for n in range(n_lists):
-        test_check_questions = get_check_and_test()
+        list_n = n+1
+        # test_check_questions = get_check_and_test()
+        # test_check_questions = get_check_and_test()
         new_batch = get_batch(questions_in_selection, n_qu = n_qu)
         # test for wrong number of questions
         test_for_wrong_questions(new_batch)
-        # Add tests and checks (one randomly picked one each)
-        new_batch.extend(test_check_questions)
+        # Pick two random test questions:
+        tests_drawn = choices(test_question_dicts,k= 2)
+        tests_new = []
+        # make new dicts for tests:
+        for t in tests_drawn:
+            new_d = dict()
+            new_d.update(t)
+            tests_new.append(new_d)
+        print('# tests:')
+        print(len(tests_new))
+        new_batch.extend(tests_new)
         # Test if there are not duplicates
         test_duplicates(input_dicts_batch, new_batch, invalid_annotations)
         # Add listnr
-        [d.update({'listNr' : str(n+1)}) for d in new_batch]
-        print('Listnr', n+1, len(new_batch))
+        [d.update({'listNr' : str(list_n)}) for d in new_batch]
+        all_listnumbers =set( [d['listNr'] for d in new_batch])
+        print('all listnumbers', all_listnumbers)
+        print('Listnr', list_n, len(new_batch))
+        print(f'listnr: {list_n}, n_questions: {len(new_batch)}, n_tests: {len(tests_new)}')
         full_batch.extend(new_batch)
     # Write batch to file
-    batch_path = batch_to_file(full_batch, url, experiment_name, run, n_qu, current_batch_n)
+    batch_path = batch_to_file(full_batch, url, experiment_name, run, n_qu, n_lists, current_batch_n)
 
     print(f'Number of questions in the total dataset: {n_total}')
     print(f'Number of questions in {experiment_name}: {n_experiment_group}')
@@ -322,16 +327,23 @@ def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70
     print(f'Percentage of annotated questions of the total: {percent_total}%')
     print(f'Percentage of annotated questions of {experiment_name}: {percent_experiment_group}%')
     print(f'Annotated {highest_batch_number} batches so far.')
-    print(f'Created batch {current_batch_n} with {len(new_batch)} questions.')
+    print(f'Created batch {current_batch_n} with {len(full_batch)} questions.')
     print(f'New batch written to: {batch_path}')
-    pl_n = f'Agree or disagree (run{run}-{experiment_name}-batch{current_batch_n}-{n_qu}-{n_qu})'
+    pl_n = f'Agree or disagree (run{run}-{experiment_name}-batch{current_batch_n}-{n_qu}-{n_lists})'
     print(pl_n)
     p_whitelist = print_task_intro(run)
-    print('\n------ Cost ---------')
-    print(f'\nCost suggestion for {len(new_batch)} questions:\n')
-    sug_cost, t = suggest_cost(len(new_batch))
 
-    total_cost_no_fee = sug_cost * n_participants
+    # suggest cost
+    print('\n------ Cost ---------')
+    # calculate based on all questions
+    # cost = cost_per_question * n_questions_list * n_lists = cost_per_questions * n_all_questions
+    #
+    n_questions_average = len(full_batch)/n_lists
+    n_participants_total = n_participants * n_lists
+    print(f'\nCost suggestion for {n_questions_average} questions:\n')
+    sug_cost, t = suggest_cost(n_questions_average)
+
+    total_cost_no_fee = sug_cost * n_participants_total
     # fill log dict:
     exp_dict['name_lingoturk'] = pl_n
     exp_dict['name_prolific'] = pl_n
@@ -339,7 +351,8 @@ def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70
     exp_dict['batch'] = current_batch_n
     exp_dict['run'] = run
     exp_dict['n_questions'] = n_qu
-    exp_dict['n_questions_batch'] = len(new_batch)
+    exp_dict['n_questions_batch'] = len(full_batch)
+    exp_dict['n_lists'] = n_lists
     exp_dict['n_participants'] = n_participants
     exp_dict['minutes_planned'] = t
     exp_dict['reward (pounds)'] = sug_cost
@@ -363,8 +376,9 @@ def main():
     url = sys.argv[2]
     # number of lists within batch
     n_lists = int(sys.argv[3])
-    n_participants_per_batch = int(sys.argv[4])
-    n_participants = n_lists * n_participants_per_batch
+    n_participants_per_question = int(sys.argv[4])
+    n_qu = 70
+    # n_participants = n_lists * n_participants_per_batch
 
 
     #url = 'test'
@@ -375,7 +389,7 @@ def main():
     elif url != 'TEST':
         test = False
 
-    create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=20, test=test)
+    create_new_batch(run, experiment_name, url, n_participants_per_question, n_lists, n_qu=n_qu, test=test)
 
 if __name__ == '__main__':
     main()

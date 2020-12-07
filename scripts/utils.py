@@ -50,7 +50,7 @@ def read_examples(relations):
 
 
 def read_pairs(collection, run, source = 'resampled'):
-    if source == 'resampled':
+    if source in ['resampled', 'test']:
         filepath = f'../data/{source}/run{run}/{collection}.csv'
     else:
         filepath = f'../data/{source}/{collection}.csv'
@@ -225,3 +225,4 @@ def to_csv(filepath, dict_list, header=True):
             writer.writeheader()
         for d in dict_list:
             writer.writerow(d)
+

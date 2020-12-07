@@ -27,3 +27,23 @@ def read_input(run, experiment_name):
             input_dicts = read_csv(f, header = header)
             all_input_dicts.extend(input_dicts)
     return all_input_dicts, input_dicts_batch, batch_numbers
+
+
+
+def get_check_and_test():
+    """
+    old code
+    :return:
+    """
+    checks = read_csv('../questions/checks.csv')
+    tests = read_csv('../questions/tests.csv')
+
+    rand_check = choice(checks)
+    rand_test = choice(tests)
+    tests_checks = [rand_check, rand_test]
+    for d in tests_checks:
+        if '' in d:
+            d.pop('')
+    return tests_checks
+
+

@@ -1,0 +1,7 @@
+property	lemma	relation	collection	quid
+pink	grass	typical_of_concept	perceptual	test1_false
+white	snow	typical_of_property	perceptual	test2_true
+grey	t-shirt	variability_open	perceptual	test3_true
+liquid	water	typical_of_concept	perceptual	test4_true
+liquid	ice	implied_category	perceptual	test5_false
+spicy	bread	implied_category	perceptual	test6_false
