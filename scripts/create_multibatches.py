@@ -2,10 +2,11 @@ from utils import read_csv, to_csv
 from utils import sort_by_key
 from utils import read_group
 
-from random import shuffle,choices
+from random import shuffle,sample
 import os
 import sys
 import glob
+from collections import Counter
 
 def read_input(run, experiment_name):
     all_input_dicts = []
@@ -241,6 +242,8 @@ def update_log(new_log_dict):
     to_csv(path, log_dicts)
     print(f'updated log: {path}')
 
+
+
 def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70, test=False):
     exp_dict = dict()
     all_input_dicts, input_dicts_batch, batch_numbers = read_input(run, experiment_name)
@@ -252,14 +255,14 @@ def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70
     test_question_dicts = read_csv(test_question_path)
 
     print('available for batch:')
-    questions_to_annotate_batch, invalid_annotations = get_available_questions(input_dicts_batch,\
+    questions_to_annotate_batch, invalid_annotations = get_available_questions(input_dicts_batch,
                                                                         question_dicts)
     print('availabel in total:')
-    questions_to_annotate_total, invalid_annotations = get_available_questions(all_input_dicts,\
+    questions_to_annotate_total, invalid_annotations = get_available_questions(all_input_dicts,
                                                                         question_dicts)
-    questions_in_selection = [d for d in questions_to_annotate_batch \
+    questions_in_selection = [d for d in questions_to_annotate_batch
                               if d['property'] in selected_properties]
-    questions_in_selection_total = [d for d in question_dicts \
+    questions_in_selection_total = [d for d in question_dicts
                               if d['property'] in selected_properties]
 
     ### Get counts ###
@@ -298,7 +301,7 @@ def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70
         # test for wrong number of questions
         test_for_wrong_questions(new_batch)
         # Pick two random test questions:
-        tests_drawn = choices(test_question_dicts,k= 2)
+        tests_drawn = sample(test_question_dicts,k= 2)
         tests_new = []
         # make new dicts for tests:
         for t in tests_drawn:
@@ -317,6 +320,17 @@ def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70
         print('Listnr', list_n, len(new_batch))
         print(f'listnr: {list_n}, n_questions: {len(new_batch)}, n_tests: {len(tests_new)}')
         full_batch.extend(new_batch)
+
+    # check for duplicate questions:
+    quids = [d['quid'] for d in  full_batch]
+    quid_counter = Counter(quids)
+    test_for_duplicates_within_batch= 'ok'
+    for quid, cnt in quid_counter.most_common():
+        if cnt >1 and not quid.startswith('test'):
+            test_for_duplicates_within_batch = 'problem'
+            print('Problmatic quesiton:', quid)
+            break
+    assert test_for_duplicates_within_batch == 'ok', 'Found question duplicates'
     # Write batch to file
     batch_path = batch_to_file(full_batch, url, experiment_name, run, n_qu, n_lists, current_batch_n)
 
@@ -390,6 +404,7 @@ def main():
         test = False
 
     create_new_batch(run, experiment_name, url, n_participants_per_question, n_lists, n_qu=n_qu, test=test)
+
 
 if __name__ == '__main__':
     main()

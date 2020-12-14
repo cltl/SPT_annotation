@@ -12,23 +12,26 @@ def add_new_example_props():
 
     # Get example properties
     ex_files = glob.glob('../examples/*-pairs.csv')
+    test_files = glob.glob('../data/test/*/*.csv')
+    ex_files.extend(test_files)
 
-    p_targets = ['prop_pos', 'prop_neg']
+    p_targets = ['prop_pos', 'prop_neg', 'property']
     for f in ex_files:
         with open(f) as infile:
             dl = read_csv(f)
         for d in dl:
             for t in p_targets:
-                prop = d[t]
-                if prop != '' and prop not in props_in_info:
-                    print(f'"{prop}" needs annotation!')
-                    new_d = dict()
-                    new_d['property'] = prop
-                    for h in header:
-                        if h not in new_d:
-                            new_d[h] = 'NEEDS INFO'
-                    if new_d not in prop_dicts:
-                        prop_dicts.append(new_d)
+                if t in d:
+                    prop = d[t]
+                    if prop != '' and prop not in props_in_info:
+                        print(f'"{prop}" needs annotation!')
+                        new_d = dict()
+                        new_d['property'] = prop
+                        for h in header:
+                            if h not in new_d:
+                                new_d[h] = 'NEEDS INFO'
+                        if new_d not in prop_dicts:
+                            prop_dicts.append(new_d)
     print(f'Add info to added properties in: {path}')
     to_csv(path, prop_dicts)
 

@@ -5,3 +5,12 @@ grey	t-shirt	variability_open	perceptual	test3_true
 liquid	water	typical_of_concept	perceptual	test4_true
 liquid	ice	implied_category	perceptual	test5_false
 spicy	bread	implied_category	perceptual	test6_false
+bitter	coffee	typical_of_concept	perceptual	test7_true
+bitter	candy	implied_category	perceptual	test8_false
+build	brick	afforded_usual	activities	test9_true
+build	cake	implied_category	activities	test10_false
+brown	blanket	variability_open	perceptual	test11_true
+carry	blanket	afforded_unusual	activities	test12_true
+loud	siren	affording_activity	perceptual	test13_true
+brown	blanket	unusual	perceptual	test14_false
+loud	siren	impossible	perceptual	test15_false
