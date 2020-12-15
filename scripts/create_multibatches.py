@@ -6,7 +6,7 @@ from random import shuffle,sample
 import os
 import sys
 import glob
-from collections import Counter
+from collections import Counter, defaultdict
 
 def read_input(run, experiment_name):
     all_input_dicts = []
@@ -198,8 +198,8 @@ def suggest_cost(n_questions):
     # UK min wage = 8.21
     # divided by 60 gives min wage per minute
     per_minute = 0.13
-    time_per_question_seconds = 8
-    price_per_question = (per_minute/60) *7
+    time_per_question_seconds = 7
+    price_per_question = (per_minute/60) *time_per_question_seconds
     final = n_questions * price_per_question
     estimated_time = (n_questions * time_per_question_seconds) / 60
     print(f'estimated time: {estimated_time} minutes')
@@ -243,44 +243,95 @@ def update_log(new_log_dict):
     print(f'updated log: {path}')
 
 
+def get_questions(run, experiment_name, all_input_dicts, input_dicts_batch):
 
-def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70, test=False):
-    exp_dict = dict()
-    all_input_dicts, input_dicts_batch, batch_numbers = read_input(run, experiment_name)
-    print(batch_numbers)
     question_path = f'../questions/run{run}-all-restricted_True.csv'
     question_dicts = read_csv(question_path)
     selected_properties = read_group(experiment_name)
-    test_question_path = f'../questions/run{run}-TEST.csv'
-    test_question_dicts = read_csv(test_question_path)
+
 
     print('available for batch:')
     questions_to_annotate_batch, invalid_annotations = get_available_questions(input_dicts_batch,
-                                                                        question_dicts)
+                                                                               question_dicts)
     print('availabel in total:')
     questions_to_annotate_total, invalid_annotations = get_available_questions(all_input_dicts,
-                                                                        question_dicts)
+                                                                               question_dicts)
     questions_in_selection = [d for d in questions_to_annotate_batch
                               if d['property'] in selected_properties]
     questions_in_selection_total = [d for d in question_dicts
-                              if d['property'] in selected_properties]
+                                    if d['property'] in selected_properties]
 
     ### Get counts ###
     # Total dataset
     n_total = len(question_dicts)
     n_not_annotated = len(questions_to_annotate_total)
     n_annotated = n_total - n_not_annotated
-    percent_total = round(n_annotated/n_total, 3) * 100
+    percent_total = round(n_annotated / n_total, 3) * 100
     ###
 
     # Experiment group
     n_experiment_group = len(questions_in_selection_total)
     n_not_annotated_experiment_group = len(questions_in_selection)
     n_annotated_experiment_group = n_experiment_group - n_not_annotated_experiment_group
-    percent_experiment_group = round(n_annotated_experiment_group/n_experiment_group, 3) * 100
+    percent_experiment_group = round(n_annotated_experiment_group / n_experiment_group, 3) * 100
     ###
     ###########
+    print(f'Percentage of annotated questions of {experiment_name}: {percent_experiment_group}%')
+    print(f'Number of questions in the total dataset: {n_total}')
+    print(f'Number of questions in {experiment_name}: {n_experiment_group}')
+    print(f'Number of annotated questions: {n_annotated}\
+        (of which in {experiment_name}: {n_annotated_experiment_group})')
+    print(f'Percentage of annotated questions of the total: {percent_total}%')
+    print(f'Percentage of annotated questions of {experiment_name}: {percent_experiment_group}%')
 
+    return questions_in_selection
+
+
+def distribute_over_lists(new_batch, n_qu, n_lists, test_question_dicts):
+    batch_with_listnumbers = []
+
+    new_batch_by_pair = sort_by_key(new_batch, ['property', 'concept'])
+    pair_by_n = defaultdict(list)
+    for p, data in new_batch_by_pair.items():
+        pair_by_n[len(data)].append(p)
+
+    pairs_assigned = set()
+    batch_dict = defaultdict(list)
+    for n, pairs in pair_by_n.items():
+        for list_n in range(n_lists):
+            list_n = list_n + 1
+            for p in pairs:
+                if p not in pairs_assigned:
+                    questions = new_batch_by_pair[p]
+                    batch_dict[list_n].extend(questions)
+                    pairs_assigned.add(p)
+                    if len(batch_dict[list_n]) >= n_qu:
+                        break
+    return batch_dict
+
+
+def add_tests(batch_dict, test_question_dicts):
+    for list_n, questions in batch_dict.items():
+        tests_drawn = sample(test_question_dicts, k=2)
+        tests_new = []
+        # make new dicts for tests:
+        for t in tests_drawn:
+            new_d = dict()
+            new_d.update(t)
+            tests_new.append(new_d)
+        print('# tests for list #', list_n, ':')
+        print(len(tests_new))
+        questions.extend(tests_new)
+
+
+def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70, test=False):
+    exp_dict = dict()
+
+    all_input_dicts, input_dicts_batch, batch_numbers = read_input(run, experiment_name)
+
+    questions_in_selection = get_questions(run, experiment_name, all_input_dicts, input_dicts_batch)
+    test_question_path = f'../questions/run{run}-TEST.csv'
+    test_question_dicts = read_csv(test_question_path)
 
     # Create new batch
     if batch_numbers:
@@ -292,37 +343,21 @@ def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70
     else:
         current_batch_n = 'TEST'
 
-    full_batch = []
-    for n in range(n_lists):
-        list_n = n+1
-        # test_check_questions = get_check_and_test()
-        # test_check_questions = get_check_and_test()
-        new_batch = get_batch(questions_in_selection, n_qu = n_qu)
-        # test for wrong number of questions
-        test_for_wrong_questions(new_batch)
-        # Pick two random test questions:
-        tests_drawn = sample(test_question_dicts,k= 2)
-        tests_new = []
-        # make new dicts for tests:
-        for t in tests_drawn:
-            new_d = dict()
-            new_d.update(t)
-            tests_new.append(new_d)
-        print('# tests:')
-        print(len(tests_new))
-        new_batch.extend(tests_new)
-        # Test if there are not duplicates
-        test_duplicates(input_dicts_batch, new_batch, invalid_annotations)
-        # Add listnr
-        [d.update({'listNr' : str(list_n)}) for d in new_batch]
-        all_listnumbers =set( [d['listNr'] for d in new_batch])
-        print('all listnumbers', all_listnumbers)
-        print('Listnr', list_n, len(new_batch))
-        print(f'listnr: {list_n}, n_questions: {len(new_batch)}, n_tests: {len(tests_new)}')
-        full_batch.extend(new_batch)
+    # collect all questions in one go:
+    n_qu_total = n_qu * n_lists
+    new_batch = get_batch(questions_in_selection, n_qu=n_qu_total)
+    batch_dict = distribute_over_lists(new_batch, n_qu, n_lists, test_question_dicts)
+    add_tests(batch_dict, test_question_dicts)
+
+    # create list with all sublists and add listn to dicts:
+    batch_with_listnumbers = []
+    for listn, questions in batch_dict.items():
+        for d in questions:
+            d['listNr'] = listn
+            batch_with_listnumbers.append(d)
 
     # check for duplicate questions:
-    quids = [d['quid'] for d in  full_batch]
+    quids = [d['quid'] for d in batch_with_listnumbers]
     quid_counter = Counter(quids)
     test_for_duplicates_within_batch= 'ok'
     for quid, cnt in quid_counter.most_common():
@@ -332,16 +367,10 @@ def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70
             break
     assert test_for_duplicates_within_batch == 'ok', 'Found question duplicates'
     # Write batch to file
-    batch_path = batch_to_file(full_batch, url, experiment_name, run, n_qu, n_lists, current_batch_n)
+    batch_path = batch_to_file(batch_with_listnumbers, url, experiment_name, run, n_qu, n_lists, current_batch_n)
 
-    print(f'Number of questions in the total dataset: {n_total}')
-    print(f'Number of questions in {experiment_name}: {n_experiment_group}')
-    print(f'Number of annotated questions: {n_annotated}\
-    (of which in {experiment_name}: {n_annotated_experiment_group})')
-    print(f'Percentage of annotated questions of the total: {percent_total}%')
-    print(f'Percentage of annotated questions of {experiment_name}: {percent_experiment_group}%')
     print(f'Annotated {highest_batch_number} batches so far.')
-    print(f'Created batch {current_batch_n} with {len(full_batch)} questions.')
+    print(f'Created batch {current_batch_n} with {len(batch_with_listnumbers)} questions.')
     print(f'New batch written to: {batch_path}')
     pl_n = f'Agree or disagree (run{run}-{experiment_name}-batch{current_batch_n}-{n_qu}-{n_lists})'
     print(pl_n)
@@ -349,10 +378,7 @@ def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70
 
     # suggest cost
     print('\n------ Cost ---------')
-    # calculate based on all questions
-    # cost = cost_per_question * n_questions_list * n_lists = cost_per_questions * n_all_questions
-    #
-    n_questions_average = len(full_batch)/n_lists
+    n_questions_average = len(batch_with_listnumbers)/n_lists
     n_participants_total = n_participants * n_lists
     print(f'\nCost suggestion for {n_questions_average} questions:\n')
     sug_cost, t = suggest_cost(n_questions_average)
@@ -365,7 +391,7 @@ def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70
     exp_dict['batch'] = current_batch_n
     exp_dict['run'] = run
     exp_dict['n_questions'] = n_qu
-    exp_dict['n_questions_batch'] = len(full_batch)
+    exp_dict['n_questions_batch'] = len(batch_with_listnumbers)
     exp_dict['n_lists'] = n_lists
     exp_dict['n_participants'] = n_participants
     exp_dict['minutes_planned'] = t
