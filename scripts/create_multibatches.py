@@ -418,11 +418,7 @@ def main():
     n_lists = int(sys.argv[3])
     n_participants_per_question = int(sys.argv[4])
     n_qu = 70
-    # n_participants = n_lists * n_participants_per_batch
 
-
-    #url = 'test'
-    #purpose = 'test'
     if url == 'TEST':
         test = True
         url = 'https://piasommerauer.github.io/annotation'

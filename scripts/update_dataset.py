@@ -10,6 +10,7 @@ def load_replacement_info(run):
     path = f'../data_pair_filtering/concept-replacement/run{run}/*.csv'
     header = ['property', 'lemma', 'label', 'certainty', 'sources_str']
     for f in glob.glob(path):
+        print(f)
         basename = os.path.basename(f)
         p, status = basename.split('.')[0].split('-')
         prop_dict[p][status] = dict()
@@ -72,9 +73,12 @@ def data_to_files(run, data_replaced):
 
 def main():
     run = sys.argv[1]
+    prop = sys.argv[2]
     prop_dict_replacements = load_replacement_info(run)
+    prop_dict_replacement_filtered = dict()
+    prop_dict_replacement_filtered[prop] = prop_dict_replacements[prop]
     prop_dict_original = load_original_dataset()
-    data_replaced = replace_data(prop_dict_replacements, prop_dict_original)
+    data_replaced = replace_data(prop_dict_replacement_filtered, prop_dict_original)
     data_to_files(run, data_replaced)
 
 

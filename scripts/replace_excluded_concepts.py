@@ -6,7 +6,6 @@ import random
 import numpy as np
 import os
 import sys
-import glob
 
 def load_general_bins():
     """
@@ -74,7 +73,10 @@ def get_concepts_set(p, col):
     """
     concept_info_dict = dict()
 
-    path = f'../data_all_candidates/concepts_additional_info/{col}/{p}.csv'
+    # original source of lexical data:
+    #path = f'../data_all_candidates/concepts_additional_info/{col}/{p}.csv'
+    # added lexical info for concepts added in the manual filtering process:
+    path = f'../data_all_candidates/concepts_additional_info_manual_run5_pilot/{col}/{p}.csv'
 
     with open(path) as infile:
         reader = csv.DictReader(infile)
@@ -83,7 +85,10 @@ def get_concepts_set(p, col):
     for d in dicts:
         concept = d['lemma']
         filter_dec = d['filter']
+        source = d['sources_str']
         if filter_dec == 'True':
+            concept_info_dict[concept] = d
+        elif filter_dec == 'False' and 'manually_included' in source:
             concept_info_dict[concept] = d
     return concept_info_dict
 
@@ -103,7 +108,14 @@ def get_excluded_included_concepts(p):
     concept_dicts_exclude = [d for d in concept_dicts_total
                              if d['decision'].startswith('exclude')]
     concept_dicts_include = [d for d in concept_dicts_total if d['decision'] == 'include']
-    return concept_dicts_exclude, concept_dicts_include
+    concept_dicts_added =[d for d in concept_dicts_total if d['decision'] == 'added']
+    print('overview')
+    print('include', len(concept_dicts_include))
+    print('exclude', len (concept_dicts_exclude))
+    print('added', len(concept_dicts_added))
+    print('total:', len(concept_dicts_total))
+    print()
+    return concept_dicts_exclude, concept_dicts_include, concept_dicts_added
 
 
 def assign_to_bin(concept_dict, bin_dict, name):
@@ -343,11 +355,13 @@ def replacements_to_file(p, run, concept_dicts_new, concept_dicts_exclude):
     if not os.path.isdir(path):
         os.mkdir(path)
     header = concept_dicts_exclude[0].keys()
+    print('header:', header)
     with open(f'{path}{p}-excluded.csv', 'w') as outfile:
         writer = csv.DictWriter(outfile, delimiter='\t', fieldnames=header)
         for d in concept_dicts_exclude:
             writer.writerow(d)
-
+    header = concept_dicts_new[0].keys()
+    print('header:', header)
     with open(f'{path}{p}-replacement.csv', 'w') as outfile:
         writer = csv.DictWriter(outfile, delimiter='\t', fieldnames=header)
         for d in concept_dicts_new:
@@ -369,8 +383,12 @@ def main():
         if label in ['pos/neg', 'neg/pos']:
             d['label'] = 'neg/pos'
     # load annotations for exclusion:
-    concept_dicts_exclude, concept_dicts_include = get_excluded_included_concepts(p)
+    concept_dicts_exclude, concept_dicts_include, concept_dicts_added = get_excluded_included_concepts(p)
     # Get selected concepts
+    # manually added concepts should be treated as already included (and serve as a basis for resampling):
+    print('before adding added:', len(concept_dicts_include))
+    concept_dicts_include = concept_dicts_include + concept_dicts_added
+    print('after adding added:', len(concept_dicts_include))
     concept_dicts_total = concept_dicts_include + concept_dicts_exclude
     concepts_selected = set([d['lemma'] for d in concept_dicts_total])
     # get concepts still available for sampling:
@@ -422,11 +440,13 @@ def main():
     new_concepts.update(resampled_concepts)
 
     # write to file
+    # add added concepts to new concepts:
+    added_concepts_set = [d['lemma'] for d in concept_dicts_added]
+    new_concepts.update(added_concepts_set)
     concept_dicts_new = get_concept_dicts(p, new_concepts, set_info_dict)
     concepts_replaced = [d['lemma'] for d in concept_dicts_exclude]
     concept_dicts_replaced = get_concept_dicts(p, concepts_replaced, set_info_dict)
-    replacements_to_file(p, concept_dicts_new, concept_dicts_replaced)
-
+    replacements_to_file(p, run, concept_dicts_new, concept_dicts_replaced)
 
 if __name__ == '__main__':
     main()
