@@ -97,7 +97,11 @@ def test_for_wrong_questions(questions_for_annotation):
     for_annotation_by_pair = sort_by_key(questions_for_annotation, ['property', 'concept'])
     for pair, questions in for_annotation_by_pair.items():
         if len(questions) > 10 or len(questions) < 3:
-            wrong_n_questions.append((n, pair))
+            print(pair, len(questions))
+            for d in questions:
+                print(d['relation'])
+            print()
+            wrong_n_questions.append((len(questions), pair))
     assert len(wrong_n_questions) == 0, 'Number of questions per pair not correct.'
 
 
@@ -107,35 +111,45 @@ def test_for_wrong_questions(questions_for_annotation):
 def get_batch(questions_to_annotate, n_qu = 70):
     batch = []
     properties = set()
+    pairs = set()
     # shuffle questions:
     shuffle(questions_to_annotate)
     questions_by_pair = sort_by_key(questions_to_annotate, ['property', 'concept'])
     available_properties = set([p.split('-')[0] for p in questions_by_pair.keys()])
-
+    print('total number of questions to select:', n_qu)
+    print('available properties', available_properties)
+    print('# available questions', len(questions_to_annotate))
     if n_qu > len(questions_to_annotate):
         print(f'only {len(questions_to_annotate)} left - adding all to batch.')
         batch.extend(questions_to_annotate)
     else:
         print(f'still more than {n_qu} questions available.')
-        for pair, questions in questions_by_pair.items():
-            prop = pair.split('-')[0]
-            if len(batch) < n_qu:
-                if prop not in properties:
-                    #print('found a new one:', prop, len(batch))
-                    batch.extend(questions)
-                    properties.add(prop)
-                else:
-                    props_not_used = available_properties.difference(properties)
-                    #print('properties not used:', len(props_not_used), len(batch))
-                    if len(props_not_used) > 0:
-                        continue
-                    else:
+
+        while len(batch) < n_qu:
+            for pair, questions in questions_by_pair.items():
+                prop = pair.split('-')[0]
+                if len(batch) < n_qu:
+                    if prop not in properties:
+                        print('found a new property:', prop, len(batch))
                         batch.extend(questions)
                         properties.add(prop)
-                        #print('no more properties, adding quetions:', len(questions))
-            else:
-                print('found enough questions', len(batch))
-                break
+                        pairs.add(pair)
+                    else:
+                        print('no more new properties')
+                        props_not_used = available_properties.difference(properties)
+                        print('properties not used:', len(props_not_used), len(batch))
+                        if len(props_not_used) > 0:
+                            continue
+                        else:
+                            if pair not in pairs:
+                                batch.extend(questions)
+                                properties.add(prop)
+                                print('no more properties, adding quetions:', len(questions))
+                            else:
+                                print('pair already added', pair)
+                else:
+                    print('found enough questions', len(batch))
+                    break
 
     return batch
 
@@ -354,6 +368,7 @@ def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70
     for listn, questions in batch_dict.items():
         for d in questions:
             d['listNr'] = listn
+            print(listn, len(questions))
             batch_with_listnumbers.append(d)
 
     # check for duplicate questions:
@@ -363,7 +378,7 @@ def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70
     for quid, cnt in quid_counter.most_common():
         if cnt >1 and not quid.startswith('test'):
             test_for_duplicates_within_batch = 'problem'
-            print('Problmatic quesiton:', quid)
+            print('Problematic quesiton:', quid)
             break
     assert test_for_duplicates_within_batch == 'ok', 'Found question duplicates'
     # Write batch to file
