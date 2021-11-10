@@ -177,10 +177,9 @@ if __name__ == '__main__':
         print(len(testpairs.questions))
         testpairs.to_file()
     elif question_type == 'questions':
-        restrict = True
         pairs =  Pairs(run,  restrict = True)
         print(len(pairs.questions))
-        pairs.to_file(overwrite_existing=False)
+        pairs.to_file(overwrite_existing=True)
 else:
     print('Unknown question type')
 

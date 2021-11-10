@@ -19,6 +19,7 @@ def load_replacement_info(run):
             for d in data_dict_list:
                 pair = (p, d['lemma'])
                 prop_dict[p][status][pair] = d
+        print(prop_dict)
     return prop_dict
 
 
@@ -47,7 +48,11 @@ def replace_data(prop_dict_replacements, prop_dict_original):
         print(prop)
         print(len(original_set_dict))
         # get original data - excluded concepts:
-        replacement_excluded = replacement_dict['excluded']
+        if 'excluded' in replacement_dict:
+            replacement_excluded = replacement_dict['excluded']
+        else:
+            replacement_dict['excluded'] = []
+            replacement_excluded = replacement_dict['excluded']
         keep = [d for pair, d in original_set_dict.items() if pair not in replacement_excluded]
         collection = keep[0]['collection']
         [d.pop('collection') for d in keep]
@@ -61,9 +66,11 @@ def replace_data(prop_dict_replacements, prop_dict_original):
     return data_replaced
 
 def data_to_files(run, data_replaced):
-
+    dir_path = f'../data/resampled/run{run}'
+    if not os.path.isdir(dir_path):
+        os.mkdir(dir_path)
     for collection, data in data_replaced.items():
-        path = f'../data/resampled/run{run}/{collection}.csv'
+        path = f'{dir_path}/{collection}.csv'
         header = data[0].keys()
         with open(path, 'w') as outfile:
             writer = csv.DictWriter(outfile, fieldnames = header, delimiter = ',')
@@ -74,12 +81,13 @@ def data_to_files(run, data_replaced):
 def main():
     run = sys.argv[1]
     prop = sys.argv[2]
+    run_new_label = sys.argv[3]
     prop_dict_replacements = load_replacement_info(run)
     prop_dict_replacement_filtered = dict()
     prop_dict_replacement_filtered[prop] = prop_dict_replacements[prop]
     prop_dict_original = load_original_dataset()
     data_replaced = replace_data(prop_dict_replacement_filtered, prop_dict_original)
-    data_to_files(run, data_replaced)
+    data_to_files(run_new_label, data_replaced)
 
 
 

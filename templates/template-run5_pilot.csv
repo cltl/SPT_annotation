@@ -11,7 +11,7 @@ level	question	relation	perceptual	perceptual_scale	complex	complex_scale	parts	
 1	I know that all or most [Y](s) [X] regularly or are used for [Xing] regularly. 	afforded_usual	0	0	0	0	0	0	1
 1	I know that (a/an) [Y] is [X] as most or all other things similar to (a/an) [Y] are [X]. 	implied_category	1	1	1	1	0	1	0
 1	I know that (a/an) [Y] has (a/an) [X] as most or all other things similar to (a/an) [Y] have (a/an) [X]. 	implied_category	0	0	0	0	1	0	0
-1	I know that (a/an) [Y]  is made of  [X] as most or all other things similar to (a/an) [Y] aare made of  [X]. 	implied_category	0	0	0	0	1	0	0
+1	I know that (a/an) [Y]  is made of  [X] as most or all other things similar to (a/an) [Y] are made of  [X]. 	implied_category	0	0	0	0	0	1	0
 1	I know that (a/an) [Y] can [X]/be used for [Xing] as most or all other things similar to (a/an) [Y] [X]. 	implied_category	0	0	0	0	0	0	1
 1	All or most  [Y](s) can [X]/be used for [Xing]. This is not what they normally do or are used for. 	afforded_unusual	0	0	0	0	0	0	1
 2	You can find (a/an) [Y] which is [X]. [CX] is one of a few possible [category] (a/an) [Y] usually has. There is only a limited range of possible [category].	variability_limited	1	0	1	0	0	0	0

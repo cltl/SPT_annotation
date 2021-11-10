@@ -262,7 +262,7 @@ def get_questions(run, experiment_name, all_input_dicts, input_dicts_batch):
     question_path = f'../questions/run{run}-all-restricted_True.csv'
     question_dicts = read_csv(question_path)
     selected_properties = read_group(experiment_name)
-
+    print('all input dicts, input dicts batch:', len(all_input_dicts), len(input_dicts_batch))
 
     print('available for batch:')
     questions_to_annotate_batch, invalid_annotations = get_available_questions(input_dicts_batch,
@@ -319,7 +319,7 @@ def distribute_over_lists(new_batch, n_qu, n_lists, test_question_dicts):
                     questions = new_batch_by_pair[p]
                     batch_dict[list_n].extend(questions)
                     pairs_assigned.add(p)
-                    if len(batch_dict[list_n]) >= n_qu:
+                    if len(batch_dict[list_n]) >= (n_qu-10):
                         break
     return batch_dict
 
@@ -427,7 +427,7 @@ def create_new_batch(run, experiment_name, url, n_participants, n_lists, n_qu=70
 
 def main():
     run = sys.argv[1]
-    experiment_name = 'experiment3'
+    experiment_name = 'experiment_scalar'
     url = sys.argv[2]
     # number of lists within batch
     n_lists = int(sys.argv[3])

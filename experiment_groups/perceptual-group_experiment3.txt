@@ -2,4 +2,3 @@ warm
 juicy
 blue
 green
-cold
